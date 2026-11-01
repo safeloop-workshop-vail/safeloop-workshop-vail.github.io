@@ -1098,6 +1098,13 @@ a.org:hover .initials {
   opacity: 1;
 }
 
+.is-dark .challenge-links .button.is-primary-action[disabled] {
+  background: #fff;
+  border-color: #fff;
+  color: var(--navy);
+  cursor: default;
+}
+
 /* Key numbers, one strip with hairline dividers */
 .ch-stats {
   display: grid;
@@ -1860,4 +1867,11 @@ a.org:hover .initials {
 
 .challenge .track-kicker {
   color: #a9b6ff;
+}
+
+/* Overview cards for the two challenge tracks. */
+#challenge-tracks, #challenge-timeline { scroll-margin-top: 6rem; }
+.challenge-track-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media screen and (max-width: 768px) {
+  .challenge-track-grid { grid-template-columns: 1fr; }
 }
