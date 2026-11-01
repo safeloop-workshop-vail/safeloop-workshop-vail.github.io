@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="SafeLoop: Safety-Critical Autonomous Driving in Closed Loop. A CVPR 2027 workshop proposal with a Demo Track and the NavSafe-∞ Closed-Loop Safety Challenge."
+      content="SafeLoop: Evaluating and Learning Safe Closed-Loop Driving with Simulation and World Models. A CVPR 2027 workshop with the NavSafe-∞ Closed-Loop Safety Challenge and a World Model Challenge."
     />
     <title>SafeLoop · CVPR 2027 Workshop</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f1b33'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%23c9d1ff' stroke-width='3'/%3E%3Ccircle cx='24' cy='16' r='2.6' fill='%23fff'/%3E%3C/svg%3E" />
@@ -17,7 +17,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" />
-    <link rel="stylesheet" href="static/css/style.css?v=2026-10-21h" />
+    <link rel="stylesheet" href="static/css/style.css?v=2026-10-31" />
     <script>document.documentElement.classList.add("js");</script>
   </head>
 
@@ -39,9 +39,9 @@
             <a class="navbar-item" href="#about">About</a>
             <a class="navbar-item" href="#news">News</a>
             <a class="navbar-item" href="#program">Program</a>
-            <a class="navbar-item" href="#papers">Call for Papers</a>
-            <a class="navbar-item" href="#demos">Demo Track</a>
-            <a class="navbar-item is-challenge" href="#challenge">Challenge</a>
+            <a class="navbar-item" href="#papers">Call for Abstracts</a>
+            <a class="navbar-item is-challenge" href="#challenge">NavSafe-∞</a>
+            <a class="navbar-item" href="#world-model">World Model</a>
             <a class="navbar-item" href="#organizers">Organizers</a>
           </div>
         </div>
@@ -56,10 +56,10 @@
             <div class="hero-main">
               <p class="edition">1st Workshop Edition</p>
               <h1>SafeLoop</h1>
-              <p class="tagline">Safety-Critical Autonomous Driving in Closed Loop</p>
-              <p class="with">with a <strong>Demo Track</strong> and the <strong>NavSafe-∞ Closed-Loop Safety Challenge</strong></p>
+              <p class="tagline">Evaluating and Learning Safe Closed-Loop Driving with Simulation and World Models</p>
+              <p class="with">with the <strong>NavSafe-∞ Challenge</strong> and the <strong>World Model Challenge</strong></p>
               <div class="hero-actions">
-                <a class="button is-cta is-papers" href="#papers"><span>Call for Papers &amp; Demos</span><span class="cta-dot" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+                <a class="button is-cta is-papers" href="#papers"><span>Call for Abstracts</span><span class="cta-dot" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
                 <a class="button is-cta is-challenge" href="#challenge"><span>NavSafe-∞ Challenge</span><span class="cta-dot" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
               </div>
             </div>
@@ -83,24 +83,25 @@
         <h2 class="title">About</h2>
         <p>
           How can we evaluate and improve safety when a driving policy's actions determine its future observations?
-          SafeLoop brings together vision, robotics, simulation, and transportation researchers around two
-          complementary tracks.
+          SafeLoop brings together vision, robotics, simulation, and transportation researchers around two challenge
+          tracks.
         </p>
         <div class="paper-tracks">
           <article class="paper-track">
-            <span class="paper-tag">Demo Track</span>
-            <h4>Simulators and world models for evaluation</h4>
-            <p>Demos examine visual and temporal consistency, action-conditioned behavior, and the reliability of policy assessment. <a href="#demos">Demo Track details</a></p>
-          </article>
-          <article class="paper-track">
-            <span class="paper-tag">Challenge Track</span>
+            <span class="paper-tag">Challenge Track 1</span>
             <h4>NavSafe-∞ Closed-Loop Safety Challenge</h4>
             <p>Driving policies are evaluated in closed loop on NavSafe-∞ safety-critical scenarios. <a href="#challenge">Challenge details</a></p>
           </article>
+          <article class="paper-track">
+            <span class="paper-tag">Challenge Track 2</span>
+            <h4>World Model Challenge</h4>
+            <p>A planned track on world models. Its scope and evaluation protocol are to be announced. <a href="#world-model">Track details</a></p>
+          </article>
         </div>
         <p>
-          The afternoon program combines six 20-minute keynotes, demo spotlights, an interactive demo and poster
-          session, challenge results, and a panel on evaluation quality. Participants will examine how the choice of
+          Submissions are limited to non-archival two-to-four-page extended abstracts that accompany entries in these
+          two challenges. The afternoon program combines six 20-minute keynotes, oral sessions for both challenge
+          tracks, a coffee break, and a panel on evaluation quality. Participants will examine how the choice of
           simulation environment affects closed-loop safety conclusions.
         </p>
         <p>
@@ -109,13 +110,15 @@
           planning decisions, and recovery behavior. Recent studies expose gaps between offline prediction quality and
           interactive driving performance, while generative simulation and data-driven evaluation create new
           opportunities for systematic testing. For the CVPR community, the central question is how visual
-          representations, scene reconstruction, and world models translate into safer driving decisions.
+          representations, scene reconstruction, and world models translate into safer driving decisions. The workshop
+          brings together vision, robotics, and transportation researchers to compare methods, diagnose failures, and
+          identify effective interventions.
         </p>
 
         <h3 class="subtitle">Topics</h3>
         <p>
-          We welcome end-to-end and modular systems, vision-language-action models, and contributions using diverse
-          benchmarks. Topics include:
+          The invited talks and discussions welcome perspectives from end-to-end and modular systems,
+          vision-language-action models, and diverse evaluation benchmarks. Topics include:
         </p>
         <ul class="topic-list">
           <li><strong>Safety-critical perception and uncertainty</strong></li>
@@ -144,9 +147,14 @@
           support.
         </p>
         <p>
-          The organizing team spans five academic and industrial institutions and includes students, postdoctoral
-          researchers, senior academics, and industry researchers. Speaker invitations seek complementary technical
-          perspectives, career stages, and geographic representation, beyond the organizers' institutional networks.
+          The nineteen organizers span eight academic and industrial institutions: UCLA, UCSD, the University of
+          Michigan, TRI, UNT, Toyota InfoTech Labs, KE:SAI, and the University of Tübingen. The team includes students,
+          early-career researchers, senior academics, and industry researchers, connecting computer vision, robot
+          learning, world modeling, and transportation safety.
+        </p>
+        <p>
+          The invited speakers span academic and industrial research, bringing complementary perspectives on
+          reinforcement learning, simulation, world models, and autonomous-driving perception.
         </p>
       </div>
     </section>
@@ -166,7 +174,7 @@
     <section class="section" id="program">
       <div class="container is-max-desktop content">
         <h2 class="title">Program</h2>
-        <p class="schedule-meta">Tentative. Half day (afternoon), 13:30–17:30 Seattle local time (PDT). Each keynote has 17 minutes of presentation and 3 minutes of questions.</p>
+        <p class="schedule-meta">Tentative. Half day (afternoon), 13:30–17:30 Seattle local time (PDT). Each keynote has 17 minutes of presentation and 3 minutes of questions. Each challenge track has a 30-minute oral session.</p>
         <!-- To fill in a keynote, replace its session-header with:
              <a class="session-header" href="HOMEPAGE" target="_blank" rel="noopener">
                <img class="session-avatar" src="static/img/people/NAME.jpg" alt="NAME" />
@@ -185,22 +193,22 @@
           <tbody>
             <tr class="general">
               <td class="t">13:30–13:35</td>
-              <td><span class="session-kicker"><span class="what">Opening and introduction to the two tracks</span></span><span class="note">Organizers</span></td>
+              <td><span class="session-kicker"><span class="what">Opening and introduction to the two challenge tracks</span></span><span class="note">Organizers</span></td>
             </tr>
             <tr class="keynote">
               <td class="t">13:35–13:55</td>
               <td>
                 <div class="session-card">
-                  <div class="session-header">
-                    <span class="session-avatar is-empty" aria-hidden="true">TBD</span>
+                  <a class="session-header" href="https://www.tri.global/about-us/dr-maani-ghaffari" target="_blank" rel="noopener">
+                    <img class="session-avatar" src="static/img/people/ghaffari.jpg" alt="Maani Ghaffari" />
                     <div class="session-text">
                       <span class="session-kicker"><span class="what">Keynote 1</span><span class="session-label is-keynote">Keynote</span></span>
-                      <p class="session-name tba">Speaker TBD</p>
-                      <p class="session-affil">Affiliation to be announced</p>
+                      <p class="session-name">Maani Ghaffari</p>
+                      <p class="session-affil">Toyota Research Institute</p>
                     </div>
-                  </div>
+                  </a>
                   <details class="session-detail"><summary>Abstract</summary><p>To be announced.</p></details>
-                  <details class="session-detail"><summary>Speaker bio</summary><p>To be announced.</p></details>
+                  <details class="session-detail"><summary>Speaker bio</summary><p>Dr. Maani Ghaffari is a staff machine learning (ML) research engineer in the Automated Driving Advanced Development division at Toyota Research Institute (TRI). He is currently on leave from the University of Michigan, where he is a tenured associate professor at the Department of Naval Architecture and Marine Engineering and the Department of Robotics.</p><p>At the University of Michigan, he founded the Computational Autonomy and Robotics Laboratory (CURLY). His research focuses on the theory and applications of robotics and autonomous systems, with an emphasis on developing efficient, generalizable algorithms that enable robots to operate in unstructured, dynamic, and uncertain environments.</p></details>
                 </div>
               </td>
             </tr>
@@ -208,16 +216,16 @@
               <td class="t">13:55–14:15</td>
               <td>
                 <div class="session-card">
-                  <div class="session-header">
-                    <span class="session-avatar is-empty" aria-hidden="true">TBD</span>
+                  <a class="session-header" href="https://www.eugenevinitsky.com/" target="_blank" rel="noopener">
+                    <img class="session-avatar" src="static/img/people/vinitsky.jpg" alt="Eugene Vinitsky" />
                     <div class="session-text">
                       <span class="session-kicker"><span class="what">Keynote 2</span><span class="session-label is-keynote">Keynote</span></span>
-                      <p class="session-name tba">Speaker TBD</p>
-                      <p class="session-affil">Affiliation to be announced</p>
+                      <p class="session-name">Eugene Vinitsky</p>
+                      <p class="session-affil">New York University</p>
                     </div>
-                  </div>
+                  </a>
                   <details class="session-detail"><summary>Abstract</summary><p>To be announced.</p></details>
-                  <details class="session-detail"><summary>Speaker bio</summary><p>To be announced.</p></details>
+                  <details class="session-detail"><summary>Speaker bio</summary><p>Eugene Vinitsky is an Assistant Professor at New York University, based in Civil Engineering with affiliations in Computer Science and the Center for Data Science, and a founding researcher at Percepta. He received a Ph.D. in control from UC Berkeley. His research goal is to see complex, human-like behavior emerge from unsupervised interaction between groups of learning agents, with an applications focus on robotics and transportation. This work spans multi-agent reinforcement learning algorithms, new data-driven simulators, and the deployment of simulator-designed controllers into real-world systems. He has spent time at Apple, Tesla, DeepMind, and Facebook AI Research, and is a recipient of an NSF fellowship.</p></details>
                 </div>
               </td>
             </tr>
@@ -225,63 +233,63 @@
               <td class="t">14:15–14:35</td>
               <td>
                 <div class="session-card">
-                  <div class="session-header">
-                    <span class="session-avatar is-empty" aria-hidden="true">TBD</span>
+                  <a class="session-header" href="https://maximilianigl.com/" target="_blank" rel="noopener">
+                    <img class="session-avatar" src="static/img/people/igl.jpg" alt="Maximilian Igl" />
                     <div class="session-text">
                       <span class="session-kicker"><span class="what">Keynote 3</span><span class="session-label is-keynote">Keynote</span></span>
-                      <p class="session-name tba">Speaker TBD</p>
-                      <p class="session-affil">Affiliation to be announced</p>
+                      <p class="session-name">Maximilian Igl</p>
+                      <p class="session-affil">NVIDIA</p>
                     </div>
-                  </div>
+                  </a>
                   <details class="session-detail"><summary>Abstract</summary><p>To be announced.</p></details>
-                  <details class="session-detail"><summary>Speaker bio</summary><p>To be announced.</p></details>
+                  <details class="session-detail"><summary>Speaker bio</summary><p>Maximilian Igl is a Researcher in the Autonomous Vehicle Research Group at NVIDIA, where he works on bringing physical AI to life in world simulations. Before joining NVIDIA, he worked at Waymo, DeepMind, and Microsoft. He holds a Ph.D. in reinforcement learning from the University of Oxford.</p></details>
                 </div>
               </td>
             </tr>
-            <tr class="oral">
-              <td class="t">14:35–14:50</td>
-              <td><span class="session-kicker"><span class="what">Demo Track: three five-minute spotlights</span><span class="session-label is-oral">Demo</span></span><span class="note">Selected demos</span></td>
+            <tr class="challenge-row">
+              <td class="t">14:35–15:05</td>
+              <td><span class="session-kicker"><span class="what">World Model Challenge Track</span><span class="session-label is-challenge-row">Challenge</span></span><span class="note">30-minute oral session; presentation format to be announced</span></td>
             </tr>
             <tr class="break">
-              <td class="t">14:50–15:40</td>
-              <td><span class="session-kicker"><span class="what">Coffee, interactive demos, and research posters</span><span class="session-label is-break">Demos &amp; posters</span></span><span class="note">All five demos and all accepted papers</span></td>
+              <td class="t">15:05–15:35</td>
+              <td><span class="session-kicker"><span class="what">Coffee break and informal discussion</span><span class="session-label is-break">Break</span></span></td>
             </tr>
             <tr class="keynote">
-              <td class="t">15:40–16:00</td>
+              <td class="t">15:35–15:55</td>
               <td>
                 <div class="session-card">
-                  <div class="session-header">
-                    <span class="session-avatar is-empty" aria-hidden="true">TBD</span>
+                  <a class="session-header" href="https://www.maxjiang.ml/" target="_blank" rel="noopener">
+                    <img class="session-avatar" src="static/img/people/jiang.jpg" alt="Chiyu Max Jiang" />
                     <div class="session-text">
                       <span class="session-kicker"><span class="what">Keynote 4</span><span class="session-label is-keynote">Keynote</span></span>
-                      <p class="session-name tba">Speaker TBD</p>
-                      <p class="session-affil">Affiliation to be announced</p>
+                      <p class="session-name">Chiyu Max Jiang</p>
+                      <p class="session-affil">Waymo</p>
                     </div>
-                  </div>
+                  </a>
                   <details class="session-detail"><summary>Abstract</summary><p>To be announced.</p></details>
-                  <details class="session-detail"><summary>Speaker bio</summary><p>To be announced.</p></details>
+                  <details class="session-detail"><summary>Speaker bio</summary><p>Chiyu Max Jiang is a Senior Manager and Senior Staff Research Scientist at Waymo (formerly the Google self-driving car project), where he leads the World Modeling team in Waymo AI Foundations, building world models for autonomy. His research interest is in building foundational generative models that serve the entire self-driving stack, from perception and behavior prediction to planning and simulation. He received a Ph.D. from UC Berkeley in 2020, where he was advised by Philip Marcus and worked on 3D computer vision and geometric deep learning.</p></details>
                 </div>
               </td>
             </tr>
             <tr class="keynote">
-              <td class="t">16:00–16:20</td>
+              <td class="t">15:55–16:15</td>
               <td>
                 <div class="session-card">
-                  <div class="session-header">
-                    <span class="session-avatar is-empty" aria-hidden="true">TBD</span>
+                  <a class="session-header" href="https://cseweb.ucsd.edu/~mkchandraker/" target="_blank" rel="noopener">
+                    <img class="session-avatar" src="static/img/people/chandraker.jpg" alt="Manmohan Chandraker" />
                     <div class="session-text">
                       <span class="session-kicker"><span class="what">Keynote 5</span><span class="session-label is-keynote">Keynote</span></span>
-                      <p class="session-name tba">Speaker TBD</p>
-                      <p class="session-affil">Affiliation to be announced</p>
+                      <p class="session-name">Manmohan Chandraker</p>
+                      <p class="session-affil">UC San Diego</p>
                     </div>
-                  </div>
+                  </a>
                   <details class="session-detail"><summary>Abstract</summary><p>To be announced.</p></details>
-                  <details class="session-detail"><summary>Speaker bio</summary><p>To be announced.</p></details>
+                  <details class="session-detail"><summary>Speaker bio</summary><p>Manmohan Chandraker is a full professor in the CSE department of University of California, San Diego. His interests are in computer vision and machine learning, with applications in self-driving and augmented reality. His work has been recognized with the Best Paper honorable mention at ECCV 2022, Google Research Awards in 2021, 2019 and 2018, the NSF CAREER Award in 2018, the Best Paper Award at CVPR 2014, an IEEE PAMI special issue on Best Papers from CVPR 2011, the 2009 CSE Dissertation Award for Best Thesis from UCSD and the Marr Prize honorable mention at ICCV 2007.</p></details>
                 </div>
               </td>
             </tr>
             <tr class="keynote">
-              <td class="t">16:20–16:40</td>
+              <td class="t">16:15–16:35</td>
               <td>
                 <div class="session-card">
                   <div class="session-header">
@@ -298,12 +306,12 @@
               </td>
             </tr>
             <tr class="challenge-row">
-              <td class="t">16:40–17:10</td>
-              <td><span class="session-kicker"><span class="what">Challenge Track: NavSafe-∞ results and failure analysis</span><span class="session-label is-challenge-row">Challenge</span></span><span class="note">Top three teams, eight minutes each, followed by six minutes of discussion</span></td>
+              <td class="t">16:35–17:05</td>
+              <td><span class="session-kicker"><span class="what">NavSafe-∞ Challenge Track: results and failure analysis</span><span class="session-label is-challenge-row">Challenge</span></span><span class="note">Top three teams, eight minutes each, followed by six minutes of discussion</span></td>
             </tr>
             <tr class="interactive">
-              <td class="t">17:10–17:25</td>
-              <td><span class="session-kicker"><span class="what">Panel: Simulation quality and safety evaluation</span><span class="session-label is-interactive">Panel</span></span><span class="note">Demo authors, challenge participants, and speakers</span></td>
+              <td class="t">17:05–17:25</td>
+              <td><span class="session-kicker"><span class="what">Panel: Simulation quality and safety evaluation</span><span class="session-label is-interactive">Panel</span></span><span class="note">Participants from both challenge tracks and invited speakers</span></td>
             </tr>
             <tr class="general">
               <td class="t">17:25–17:30</td>
@@ -315,55 +323,60 @@
     </section>
 
 
-    <!-- ======================= CALL FOR PAPERS ======================= -->
+    <!-- ======================= CALL FOR ABSTRACTS ======================= -->
     <section class="section" id="papers">
       <div class="container is-max-desktop content">
-        <h2 class="title">Call for Papers</h2>
+        <h2 class="title">Call for Extended Abstracts</h2>
         <p>
-          We invite papers on all <a href="#about">topics</a> of the workshop. We welcome end-to-end and modular
-          systems, vision-language-action models, and contributions using diverse benchmarks. Demo submissions follow
-          the same timeline; see the <a href="#demos">Demo Track</a>.
+          We accept only non-archival two-to-four-page extended abstracts, excluding references, that accompany entries
+          in the <a href="#challenge">NavSafe-∞</a> or <a href="#world-model">World Model</a> challenge. These abstracts
+          serve as the challenge technical reports. There is no separate full-paper or general research submission
+          track, and no proceedings publication.
         </p>
         <div class="paper-tracks">
           <article class="paper-track">
-            <span class="paper-tag">Archival</span>
-            <h4>Full papers</h4>
-            <p class="paper-len">Up to 8 pages, excluding references</p>
-            <p>Published in the CVPR 2027 workshop proceedings.</p>
+            <span class="paper-tag">Challenge Track 1</span>
+            <h4>NavSafe-∞ entries</h4>
+            <p class="paper-len">2–4 pages, excluding references</p>
+            <p>Non-archival. Due May 27, 2027, after final models are due on May 20.</p>
           </article>
           <article class="paper-track">
-            <span class="paper-tag">Non-archival</span>
-            <h4>Extended abstracts</h4>
-            <p class="paper-len">2–4 pages</p>
-            <p>Demos, work in progress, negative results, or position papers.</p>
+            <span class="paper-tag">Challenge Track 2</span>
+            <h4>World Model entries</h4>
+            <p class="paper-len">2–4 pages, excluding references</p>
+            <p>Non-archival. Dates will be announced with the challenge rules.</p>
           </article>
         </div>
 
         <table class="table kv">
           <tbody>
             <tr>
-              <td>Format</td>
-              <td>All submissions follow the applicable CVPR policies.</td>
+              <td>Content</td>
+              <td>Identify the challenge track, and describe the method, training data, evaluation results, limitations, and reproducibility details.</td>
             </tr>
             <tr>
               <td>Review</td>
-              <td>At least three double-blind reviews per submission on OpenReview.</td>
+              <td>At least three reviews per abstract on OpenReview.</td>
             </tr>
             <tr>
               <td>Review criteria</td>
-              <td>Technical quality, relevance, reproducibility, and discussion value.</td>
+              <td>Methodological clarity, relevance to the chosen challenge, reproducibility, and analysis of results and failure cases.</td>
             </tr>
             <tr>
               <td>Conflicts</td>
-              <td>A non-conflicted chair handles conflicts. Organizer-authored papers receive independent external oversight and are excluded from paper awards.</td>
+              <td>A non-conflicted chair handles conflicts. Organizer-authored entries receive independent oversight and are shown for reference only, without eligibility for challenge awards.</td>
             </tr>
             <tr>
-              <td>Author requirements</td>
-              <td>Complete your OpenReview profile. CVPR's limit of ten submissions per author applies.</td>
+              <td>Oral presentations</td>
+              <td>Selection follows the evaluation and verification process of the corresponding challenge.</td>
             </tr>
             <tr>
-              <td>Presentation</td>
-              <td>Every accepted paper receives a poster opportunity.</td>
+              <td>Sharing</td>
+              <td>Accepted extended abstracts are shared through the workshop website with author consent.</td>
+            </tr>
+            <tr>
+              <td>Policies</td>
+              <td>Submissions must follow the applicable CVPR policies.</td>
             </tr>
             <tr>
               <td>Submission portal</td>
@@ -374,69 +387,25 @@
 
         <h3 class="subtitle">Important Dates</h3>
         <ol class="ch-timeline is-light">
-          <li><time>Jan 15, 2027</time><span>Call for papers and demos; submission portal opens</span></li>
-          <li><time>Mar 1, 2027</time><span>Paper and demo submission deadline</span></li>
-          <li><time>Mar 25, 2027</time><span>Acceptance notifications</span></li>
-          <li><time>Mar 29, 2027</time><span>Author metadata of accepted archival papers sent to CVPR</span></li>
-          <li><time>Apr 23, 2027</time><span>Archival camera-ready deadline</span></li>
+          <li><time>May 20, 2027</time><span>NavSafe-∞ final models due</span></li>
+          <li><time>May 27, 2027</time><span>NavSafe-∞ extended abstracts due</span></li>
+          <li><time>Jun 3, 2027</time><span>NavSafe-∞ verified results and presentation notifications</span></li>
+          <li><time>TBD</time><span>World Model Challenge submission and review dates</span></li>
           <li><time>Jun 20 or 21, 2027</time><span>Workshop</span></li>
         </ol>
         <p class="tba">All deadlines are 23:59 Anywhere on Earth (AoE).</p>
       </div>
     </section>
 
-    <!-- ======================= DEMO TRACK ======================= -->
-    <section class="section is-tinted" id="demos">
-      <div class="container is-max-desktop content">
-        <h2 class="title">Demo Track</h2>
-        <p>
-          <strong>Simulators and world models for evaluation.</strong> The Demo Track showcases simulators and world
-          models used to evaluate autonomous-driving policies. Demonstrations will show how evaluation quality depends
-          on visual fidelity, temporal and geometric consistency, responses to ego actions, and interactions with other
-          road users.
-        </p>
-        <p>
-          Authors present a controlled driving example and evidence of how simulator or model behavior affects a
-          policy's decisions, failure modes, or scores. Comparisons with recorded observations or a reference simulator
-          can make these effects visible.
-        </p>
-
-        <table class="table kv">
-          <tbody>
-            <tr>
-              <td>Submission</td>
-              <td>A 2–4 page non-archival abstract and a short demo video. Demos follow the <a href="#papers">paper review timeline</a>.</td>
-            </tr>
-            <tr>
-              <td>Selection</td>
-              <td>The program committee selects five demos based on relevance to closed-loop evaluation, supporting evidence, reproducibility, and suitability for interactive discussion.</td>
-            </tr>
-            <tr>
-              <td>At the workshop</td>
-              <td>All five demos receive a station in the 50-minute demo and poster session. Three demos are selected for five-minute spotlights.</td>
-            </tr>
-            <tr>
-              <td>What to show</td>
-              <td>Live interaction or recorded rollouts that show successes, artifacts, and failure cases, with a brief description of the data, model, and compute used.</td>
-            </tr>
-            <tr>
-              <td>Equipment</td>
-              <td>Demo tables have power. Presenters bring their laptops and any additional display hardware.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-
     <!-- ======================= CHALLENGE ======================= -->
     <section class="section is-dark challenge" id="challenge">
       <div class="container is-max-desktop">
         <header class="ch-head">
+          <p class="track-kicker">Challenge Track 1</p>
           <h2 class="title">NavSafe-∞ Closed-Loop Safety Challenge</h2>
           <p class="ch-lead">
-            The Challenge Track hosts the NavSafe-∞ Closed-Loop Safety Challenge. Submitted driving policies are
-            evaluated in closed loop on the photorealistic safety-critical scenarios of the NavSafe-∞ benchmark.
+            The NavSafe-∞ Closed-Loop Safety Challenge evaluates submitted driving policies in closed loop on the
+            photorealistic safety-critical scenarios of the NavSafe-∞ benchmark.
             Evaluating all methods on shared scenarios will show which approaches improve collision avoidance, rule
             compliance, and recovery, and which failure modes persist across policies.
           </p>
@@ -451,7 +420,7 @@
         <div class="ch-stats">
           <div><span class="n">280</span><span class="l">public scenarios</span></div>
           <div><span class="n">28</span><span class="l">event types in 4 categories</span></div>
-          <div><span class="n">140+</span><span class="l">private scenarios, at least 5 per type</span></div>
+          <div><span class="n">56</span><span class="l">planned private scenarios, 2 per type</span></div>
           <div><span class="n">3</span><span class="l">fixed seeds</span></div>
         </div>
 
@@ -469,7 +438,7 @@
             <article class="ch-pool is-private">
               <span class="ch-tag">Held by the organizers</span>
               <h4>Private pool</h4>
-              <p class="ch-pool-size">At least 140 unreleased scenarios, five or more per event type</p>
+              <p class="ch-pool-size">A planned 56 unreleased scenarios: 28 event types × two scenarios per type</p>
               <p>The private pool never leaves organizer servers.</p>
               <p class="ch-pool-role"><span>Used for</span>Final ranking</p>
             </article>
@@ -545,11 +514,11 @@
         <div class="ch-block">
           <h3 class="ch-h">Submission and rules</h3>
           <dl class="ch-rules">
-            <div><dt>Submit</dt><dd>Code, weights, and an environment file (e.g., Conda or pip) through the <a href="https://huggingface.co/spaces/SafeLoop-workshop/NavSafe-infty-challenge-2027" target="_blank" rel="noopener">Hugging Face portal</a>.</dd></div>
+            <div><dt>Submit</dt><dd>Code, weights, and an environment file (e.g., Conda or pip) through the <a href="https://huggingface.co/spaces/SafeLoop-workshop/NavSafe-infty-challenge-2027" target="_blank" rel="noopener">Hugging Face portal</a>, together with a 2–4 page <a href="#papers">extended abstract</a> through OpenReview by the abstract deadline.</dd></div>
             <div><dt>Compute</dt><dd>Each submission must run offline on a single NVIDIA RTX 3090 (24 GB).</dd></div>
             <div><dt>Limits</dt><dd>One validation submission per day, up to ten in total. Each team chooses one final model.</dd></div>
             <div><dt>Score visibility</dt><dd>Private-pool scores stay hidden until the deadline.</dd></div>
-            <div><dt>Verification</dt><dd>Top entries must submit a technical report and pass an independent rerun before awards.</dd></div>
+            <div><dt>Verification</dt><dd>Top entries must pass an independent rerun before awards.</dd></div>
             <div><dt>Eligibility</dt><dd>Organizer entries are shown for reference only.</dd></div>
             <div><dt>Ethics</dt><dd>Releases respect source-data and asset licenses. Public videos are screened for identifying information. Documentation reports geographic coverage and vulnerable-road-user representation.</dd></div>
           </dl>
@@ -572,7 +541,7 @@
             <li><time>Feb 1, 2027</time><span>Public pool, devkit, rules, and baselines released</span></li>
             <li><time>Mar 1, 2027</time><span>Evaluation server opens on Hugging Face</span></li>
             <li><time>May 20, 2027</time><span>Final models due</span></li>
-            <li><time>May 27, 2027</time><span>Technical reports due (non-archival)</span></li>
+            <li><time>May 27, 2027</time><span>Two-to-four-page extended abstracts due</span></li>
             <li><time>Jun 3, 2027</time><span>Verified results and award notifications</span></li>
             <li><time>Jun 20 or 21, 2027</time><span>Workshop presentations and awards</span></li>
           </ol>
@@ -597,6 +566,38 @@
       </div>
     </section>
 
+
+    <!-- ======================= WORLD MODEL CHALLENGE ======================= -->
+    <section class="section is-tinted" id="world-model">
+      <div class="container is-max-desktop content">
+        <p class="track-kicker">Challenge Track 2</p>
+        <h2 class="title">World Model Challenge</h2>
+        <p>
+          The second challenge track will focus on world models. Entries will be accompanied by non-archival
+          two-to-four-page extended abstracts under the common workshop format.
+        </p>
+        <table class="table kv">
+          <tbody>
+            <tr>
+              <td>Status</td>
+              <td><span class="tba">Planned. Details will be announced with the challenge rules.</span></td>
+            </tr>
+            <tr>
+              <td>To be announced</td>
+              <td>Scope, datasets, evaluation protocol and metrics, model-submission requirements, timeline, and awards.</td>
+            </tr>
+            <tr>
+              <td>At the workshop</td>
+              <td>A 30-minute oral session (14:35–15:05). The presentation format will be announced.</td>
+            </tr>
+            <tr>
+              <td>Extended abstracts</td>
+              <td>2–4 pages, non-archival, following the <a href="#papers">call for extended abstracts</a>.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
     <!-- ======================= ORGANIZERS ======================= -->
     <section class="section" id="organizers">
@@ -626,6 +627,11 @@
             <p class="org-name">Yuxin Bao</p>
             <p class="org-affil">UCLA</p>
             <p class="org-role">Challenge co-chair</p>
+          </a>
+          <a class="org" href="https://curly.engin.umich.edu/people" target="_blank" rel="noopener">
+            <img src="static/img/people/junzhe.jpg" alt="Junzhe Wu" />
+            <p class="org-name">Junzhe Wu</p>
+            <p class="org-affil">University of Michigan</p>
           </a>
           <a class="org" href="https://zewei-zhou.github.io/" target="_blank" rel="noopener">
             <img src="static/img/people/zewei.png" alt="Zewei Zhou" />
@@ -702,7 +708,7 @@
         <h3 class="subtitle">Program Committee</h3>
         <p>Tentative: Seth Z. Zhao, Luobin Wang, Hongwei Ruan, Yuxin Bao, Zewei Zhou, Walter Zimmer, Yu Zeng, and Rowan McAllister.</p>
         <p>Senior review coordinators: Bolei Zhou, Jiaqi Ma, and Henrik Christensen.</p>
-        <p class="tba">We will recruit 15–20 external reviewers.</p>
+        <p class="tba">Additional external reviewers will be recruited as needed for the two challenges.</p>
       </div>
     </section>
 
