@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="SafeLoop: Evaluating and Learning Safe Closed-Loop Driving with Simulation and World Models. A CVPR 2027 workshop with the NavSafe-∞ Closed-Loop Safety Challenge and a World Model Challenge."
+      content="SafeLoop: Evaluating and Learning Safe Closed-Loop Driving with Simulation and World Models. A CVPR 2027 workshop with the NavSafe-∞ Closed-Loop Safety Challenge and the GS World Challenge."
     />
     <title>SafeLoop · CVPR 2027 Workshop</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f1b33'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%23c9d1ff' stroke-width='3'/%3E%3Ccircle cx='24' cy='16' r='2.6' fill='%23fff'/%3E%3C/svg%3E" />
@@ -17,7 +17,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" />
-    <link rel="stylesheet" href="static/css/style.css?v=2026-10-31" />
+    <link rel="stylesheet" href="static/css/style.css?v=2026-11-01-challenge-buttons" />
     <script>document.documentElement.classList.add("js");</script>
   </head>
 
@@ -41,7 +41,8 @@
             <a class="navbar-item" href="#program">Program</a>
             <a class="navbar-item" href="#papers">Call for Abstracts</a>
             <a class="navbar-item is-challenge" href="#challenge">NavSafe-∞</a>
-            <a class="navbar-item" href="#world-model">World Model</a>
+            <a class="navbar-item" href="#gs-world">GS World</a>
+            <a class="navbar-item" href="#challenge-rules">Rules</a>
             <a class="navbar-item" href="#organizers">Organizers</a>
           </div>
         </div>
@@ -57,7 +58,7 @@
               <p class="edition">1st Workshop Edition</p>
               <h1>SafeLoop</h1>
               <p class="tagline">Evaluating and Learning Safe Closed-Loop Driving with Simulation and World Models</p>
-              <p class="with">with the <strong>NavSafe-∞ Challenge</strong> and the <strong>World Model Challenge</strong></p>
+              <p class="with">with the <strong>NavSafe-∞ Challenge</strong> and the <strong>GS World Challenge</strong></p>
               <div class="hero-actions">
                 <a class="button is-cta is-papers" href="#papers"><span>Call for Abstracts</span><span class="cta-dot" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
                 <a class="button is-cta is-challenge" href="#challenge"><span>NavSafe-∞ Challenge</span><span class="cta-dot" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
@@ -86,7 +87,7 @@
           SafeLoop brings together vision, robotics, simulation, and transportation researchers around two challenge
           tracks.
         </p>
-        <div class="paper-tracks">
+        <div class="paper-tracks challenge-track-grid" id="challenge-tracks">
           <article class="paper-track">
             <span class="paper-tag">Challenge Track 1</span>
             <h4>NavSafe-∞ Closed-Loop Safety Challenge</h4>
@@ -94,8 +95,8 @@
           </article>
           <article class="paper-track">
             <span class="paper-tag">Challenge Track 2</span>
-            <h4>World Model Challenge</h4>
-            <p>A planned track on world models. Its scope and evaluation protocol are to be announced. <a href="#world-model">Track details</a></p>
+            <h4>GS World Adverse-Weather Closed Loop</h4>
+            <p>Test visual and control robustness under adverse weather combined with traffic-scenario edits. <a href="#gs-world">Track details</a></p>
           </article>
         </div>
         <p>
@@ -248,7 +249,7 @@
             </tr>
             <tr class="challenge-row">
               <td class="t">14:35–15:05</td>
-              <td><span class="session-kicker"><span class="what">World Model Challenge Track</span><span class="session-label is-challenge-row">Challenge</span></span><span class="note">30-minute oral session; presentation format to be announced</span></td>
+              <td><span class="session-kicker"><span class="what">GS World Challenge Track: results and failure analysis</span><span class="session-label is-challenge-row">Challenge</span></span><span class="note">30-minute oral session</span></td>
             </tr>
             <tr class="break">
               <td class="t">15:05–15:35</td>
@@ -329,11 +330,11 @@
         <h2 class="title">Call for Extended Abstracts</h2>
         <p>
           We accept only non-archival two-to-four-page extended abstracts, excluding references, that accompany entries
-          in the <a href="#challenge">NavSafe-∞</a> or <a href="#world-model">World Model</a> challenge. These abstracts
+          in the <a href="#challenge">NavSafe-∞</a> or <a href="#gs-world">GS World</a> challenge. These abstracts
           serve as the challenge technical reports. There is no separate full-paper or general research submission
           track, and no proceedings publication.
         </p>
-        <div class="paper-tracks">
+        <div class="paper-tracks challenge-track-grid">
           <article class="paper-track">
             <span class="paper-tag">Challenge Track 1</span>
             <h4>NavSafe-∞ entries</h4>
@@ -342,9 +343,9 @@
           </article>
           <article class="paper-track">
             <span class="paper-tag">Challenge Track 2</span>
-            <h4>World Model entries</h4>
+            <h4>GS World entries</h4>
             <p class="paper-len">2–4 pages, excluding references</p>
-            <p>Non-archival. Dates will be announced with the challenge rules.</p>
+            <p>Non-archival. Due May 27, 2027, after final models are due on May 20.</p>
           </article>
         </div>
 
@@ -386,14 +387,7 @@
         </table>
 
         <h3 class="subtitle">Important Dates</h3>
-        <ol class="ch-timeline is-light">
-          <li><time>May 20, 2027</time><span>NavSafe-∞ final models due</span></li>
-          <li><time>May 27, 2027</time><span>NavSafe-∞ extended abstracts due</span></li>
-          <li><time>Jun 3, 2027</time><span>NavSafe-∞ verified results and presentation notifications</span></li>
-          <li><time>TBD</time><span>World Model Challenge submission and review dates</span></li>
-          <li><time>Jun 20 or 21, 2027</time><span>Workshop</span></li>
-        </ol>
-        <p class="tba">All deadlines are 23:59 Anywhere on Earth (AoE).</p>
+        <p>Both tracks follow the <a href="#challenge-timeline">shared competition timeline</a>.</p>
       </div>
     </section>
 
@@ -413,7 +407,6 @@
             <a class="button is-primary-action" href="https://huggingface.co/spaces/SafeLoop-workshop/NavSafe-infty-challenge-2027" target="_blank" rel="noopener">Challenge on Hugging Face</a>
             <a class="button" href="https://navsafe-vail.github.io/" target="_blank" rel="noopener">NavSafe-∞ project page</a>
             <a class="button" href="https://arxiv.org/abs/2609.26618" target="_blank" rel="noopener">Paper (arXiv)</a>
-            <span class="button" disabled>Devkit: Feb 1, 2027</span>
           </div>
         </header>
 
@@ -421,7 +414,7 @@
           <div><span class="n">280</span><span class="l">public scenarios</span></div>
           <div><span class="n">28</span><span class="l">event types in 4 categories</span></div>
           <div><span class="n">56</span><span class="l">planned private scenarios, 2 per type</span></div>
-          <div><span class="n">3</span><span class="l">fixed seeds</span></div>
+          <div><span class="n">20</span><span class="l">policies in the benchmark paper</span></div>
         </div>
 
         <div class="ch-block">
@@ -432,64 +425,49 @@
               <span class="ch-tag">Released</span>
               <h4>Public pool</h4>
               <p class="ch-pool-size">The 280 published scenarios</p>
-              <p>Released on February 1, 2027, together with the devkit and baseline adapters. Use it to validate your policy and to compare with the 20 policies in the NavSafe-∞ paper.</p>
+              <p>Use it to validate your policy and to compare with the 20 policies in the NavSafe-∞ paper.</p>
               <p class="ch-pool-role"><span>Used for</span>Validation and comparison</p>
             </article>
             <article class="ch-pool is-private">
               <span class="ch-tag">Held by the organizers</span>
               <h4>Private pool</h4>
               <p class="ch-pool-size">A planned 56 unreleased scenarios: 28 event types × two scenarios per type</p>
-              <p>The private pool never leaves organizer servers.</p>
               <p class="ch-pool-role"><span>Used for</span>Final ranking</p>
             </article>
           </div>
         </div>
 
         <div class="ch-block">
-          <h3 class="ch-h">Policy interface</h3>
-          <div class="ch-flow">
-            <div class="ch-step">
-              <span class="ch-k">Input</span>
-              <p>Rendered camera images, calibration, ego-state history, and a route instruction.</p>
-            </div>
-            <span class="ch-arrow" aria-hidden="true"></span>
-            <div class="ch-step is-policy">
-              <span class="ch-k">Your policy</span>
-              <p>Code, weights, and an environment file, run offline on a single NVIDIA RTX 3090 (24 GB).</p>
-            </div>
-            <span class="ch-arrow" aria-hidden="true"></span>
-            <div class="ch-step">
-              <span class="ch-k">Output</span>
-              <p>A future ego trajectory.</p>
-            </div>
-          </div>
-          <p class="ch-sub">All entries share the same camera rig, controller, and vehicle model.</p>
-
+          <h3 class="ch-h">Training and compute</h3>
           <div class="ch-two">
             <div class="ch-panel">
               <h4>Training data</h4>
-              <p class="ch-panel-text">The NAVSIM/OpenScene training split, and any declared external datasets or pretrained models.</p>
+              <p class="ch-panel-text">The NAVSIM/OpenScene training split, and any declared external datasets or pretrained models. Training on NavSafe data, evaluation logs, or score feedback is not allowed.</p>
             </div>
             <div class="ch-panel is-warn">
-              <h4>Not provided or not allowed</h4>
+              <h4>Unavailable inputs</h4>
               <ul class="ch-x">
                 <li>LiDAR</li>
                 <li>Privileged scene state</li>
                 <li>Ground-truth tracks</li>
                 <li>Future trajectories</li>
-                <li>Training on NavSafe data, evaluation logs, or score feedback</li>
               </ul>
             </div>
           </div>
+          <dl class="ch-rules">
+            <div><dt>Compute</dt><dd>Each submission must run offline on a single NVIDIA RTX 3090 (24 GB).</dd></div>
+            <div><dt>Model portal</dt><dd>Submit through the <a href="https://huggingface.co/spaces/SafeLoop-workshop/NavSafe-infty-challenge-2027" target="_blank" rel="noopener">NavSafe-∞ Hugging Face portal</a>.</dd></div>
+            <div><dt>Limits</dt><dd>One validation submission per day, up to ten in total. Each team chooses one final model.</dd></div>
+            <div><dt>Documentation</dt><dd>Public videos are screened for identifying information. Documentation reports geographic coverage and vulnerable-road-user representation.</dd></div>
+          </dl>
         </div>
 
         <div class="ch-block">
-          <h3 class="ch-h">Evaluation and ranking</h3>
+          <h3 class="ch-h">Metrics and tie-breakers</h3>
           <div class="ch-two">
             <div class="ch-panel">
-              <h4>Ranking order</h4>
+              <h4>Tie-breakers</h4>
               <ol class="ch-rank">
-                <li><strong>Mean private-pool Driving Score</strong> over three fixed seeds</li>
                 <li>If tied: <strong>Success Rate</strong></li>
                 <li>If still tied: the <strong>lowest category score</strong></li>
               </ol>
@@ -512,19 +490,6 @@
         </div>
 
         <div class="ch-block">
-          <h3 class="ch-h">Submission and rules</h3>
-          <dl class="ch-rules">
-            <div><dt>Submit</dt><dd>Code, weights, and an environment file (e.g., Conda or pip) through the <a href="https://huggingface.co/spaces/SafeLoop-workshop/NavSafe-infty-challenge-2027" target="_blank" rel="noopener">Hugging Face portal</a>, together with a 2–4 page <a href="#papers">extended abstract</a> through OpenReview by the abstract deadline.</dd></div>
-            <div><dt>Compute</dt><dd>Each submission must run offline on a single NVIDIA RTX 3090 (24 GB).</dd></div>
-            <div><dt>Limits</dt><dd>One validation submission per day, up to ten in total. Each team chooses one final model.</dd></div>
-            <div><dt>Score visibility</dt><dd>Private-pool scores stay hidden until the deadline.</dd></div>
-            <div><dt>Verification</dt><dd>Top entries must pass an independent rerun before awards.</dd></div>
-            <div><dt>Eligibility</dt><dd>Organizer entries are shown for reference only.</dd></div>
-            <div><dt>Ethics</dt><dd>Releases respect source-data and asset licenses. Public videos are screened for identifying information. Documentation reports geographic coverage and vulnerable-road-user representation.</dd></div>
-          </dl>
-        </div>
-
-        <div class="ch-block">
           <h3 class="ch-h">Awards</h3>
           <div class="ch-awards">
             <div><span class="place">1st</span><span class="what">place</span></div>
@@ -535,23 +500,7 @@
           <p class="ch-sub">The top three teams present their methods and failure cases at the workshop. Prizes and sponsors will be announced.</p>
         </div>
 
-        <div class="ch-block">
-          <h3 class="ch-h">Timeline</h3>
-          <ol class="ch-timeline">
-            <li><time>Feb 1, 2027</time><span>Public pool, devkit, rules, and baselines released</span></li>
-            <li><time>Mar 1, 2027</time><span>Evaluation server opens on Hugging Face</span></li>
-            <li><time>May 20, 2027</time><span>Final models due</span></li>
-            <li><time>May 27, 2027</time><span>Two-to-four-page extended abstracts due</span></li>
-            <li><time>Jun 3, 2027</time><span>Verified results and award notifications</span></li>
-            <li><time>Jun 20 or 21, 2027</time><span>Workshop presentations and awards</span></li>
-          </ol>
-        </div>
-
         <div class="ch-foot">
-          <p class="caveat">
-            Simulation results measure behavior under specified event distributions and modeling assumptions. They do
-            not certify road safety or estimate real-world crash rates.
-          </p>
           <details class="ch-cite">
             <summary>Cite NavSafe-∞</summary>
             <pre>@article{bao2026navsafe,
@@ -567,35 +516,135 @@
     </section>
 
 
-    <!-- ======================= WORLD MODEL CHALLENGE ======================= -->
-    <section class="section is-tinted" id="world-model">
-      <div class="container is-max-desktop content">
-        <p class="track-kicker">Challenge Track 2</p>
-        <h2 class="title">World Model Challenge</h2>
-        <p>
-          The second challenge track will focus on world models. Entries will be accompanied by non-archival
-          two-to-four-page extended abstracts under the common workshop format.
-        </p>
-        <table class="table kv">
-          <tbody>
-            <tr>
-              <td>Status</td>
-              <td><span class="tba">Planned. Details will be announced with the challenge rules.</span></td>
-            </tr>
-            <tr>
-              <td>To be announced</td>
-              <td>Scope, datasets, evaluation protocol and metrics, model-submission requirements, timeline, and awards.</td>
-            </tr>
-            <tr>
-              <td>At the workshop</td>
-              <td>A 30-minute oral session (14:35–15:05). The presentation format will be announced.</td>
-            </tr>
-            <tr>
-              <td>Extended abstracts</td>
-              <td>2–4 pages, non-archival, following the <a href="#papers">call for extended abstracts</a>.</td>
-            </tr>
-          </tbody>
-        </table>
+    <!-- ======================= GS WORLD CHALLENGE ======================= -->
+    <section class="section is-dark challenge" id="gs-world">
+      <div class="container is-max-desktop">
+        <header class="ch-head">
+          <p class="track-kicker">Challenge Track 2</p>
+          <h2 class="title">GS World Adverse-Weather Closed-Loop Challenge</h2>
+          <p class="ch-lead">The GS World Challenge evaluates visual and control robustness under adverse weather combined with traffic-scenario edits.</p>
+          <div class="challenge-links">
+            <button class="button is-primary-action" type="button" disabled>Challenge project page</button>
+            <button class="button" type="button" disabled>arXiv</button>
+          </div>
+        </header>
+
+        <div class="ch-block">
+          <h3 class="ch-h">Evaluation pools</h3>
+          <p class="ch-sub">Scenes from Waymo, PAI, and nuScenes cover 13 task types, including vehicle and pedestrian interactions, signal and intersection tasks, constrained-road maneuvers, and special-vehicle encounters. Every task has weather variants, with appearances generated from edited 4DGS renderings via structure-preserving video style transfer.</p>
+          <div class="ch-pools">
+            <article class="ch-pool">
+              <span class="ch-tag">Public evaluation</span>
+              <h4>Public pool</h4>
+              <p class="ch-pool-size">1,000 scenarios</p>
+              <p>Baseline adapters include policies such as AutoVLA, DrivoR, and Alpamayo.</p>
+              <p class="ch-pool-role"><span>Used for</span>Evaluation and comparison</p>
+            </article>
+            <article class="ch-pool is-private">
+              <span class="ch-tag">Held by the organizers</span>
+              <h4>Private pool</h4>
+              <p class="ch-pool-size">78 scenarios</p>
+              <p>Three environmental conditions × 13 task types × two instances per type and condition.</p>
+              <p class="ch-pool-role"><span>Used for</span>Final ranking</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="ch-block">
+          <h3 class="ch-h">Training and compute</h3>
+          <dl class="ch-rules">
+            <div><dt>Training</dt><dd>GS World scenarios are evaluation-only. Training on the public or private pools or evaluation feedback is not allowed.</dd></div>
+            <div><dt>Compute</dt><dd>Evaluation uses a single NVIDIA RTX PRO 6000 GPU.</dd></div>
+            <div><dt>Documentation</dt><dd>Synthetic-weather and vehicle-model assumptions will be documented.</dd></div>
+          </dl>
+        </div>
+
+        <div class="ch-block">
+          <h3 class="ch-h">Metrics and tie-breakers</h3>
+          <div class="ch-two">
+            <div class="ch-panel">
+              <h4>Tie-breakers</h4>
+              <ol class="ch-rank">
+                <li>If tied: <strong>Task Progress</strong></li>
+                <li>If still tied: <strong>Comfort</strong></li>
+                <li>If still tied: <strong>lower Runtime</strong></li>
+              </ol>
+            </div>
+            <div class="ch-panel">
+              <h4>Reported for every entry</h4>
+              <ul class="ch-chips">
+                <li class="is-key">Driving Score (DS)</li>
+                <li class="is-key">Task Progress (TP)</li>
+                <li>Collision</li>
+                <li>Comfort</li>
+                <li>Runtime</li>
+              </ul>
+            </div>
+          </div>
+          <ul class="ch-list">
+            <li><strong>Task Progress:</strong> rule-compliant task stages receive credit. Collisions stop the rollout while retaining credit for completed stages.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================= SHARED CHALLENGE RULES ======================= -->
+    <section class="section is-dark challenge" id="challenge-rules">
+      <div class="container is-max-desktop">
+        <header class="ch-head">
+          <p class="track-kicker">Both challenge tracks</p>
+          <h2 class="title">Rules</h2>
+          <p class="ch-lead">The following rules apply to both NavSafe-∞ and GS World.</p>
+        </header>
+
+        <div class="ch-block">
+          <h3 class="ch-h">Policy interface</h3>
+          <div class="ch-flow">
+            <div class="ch-step"><span class="ch-k">Input</span><p>Rendered camera images, calibration, ego-state history, and a route instruction.</p></div>
+            <span class="ch-arrow" aria-hidden="true"></span>
+            <div class="ch-step is-policy"><span class="ch-k">Your policy</span><p>Code, weights, and an environment file (e.g., Conda or pip).</p></div>
+            <span class="ch-arrow" aria-hidden="true"></span>
+            <div class="ch-step"><span class="ch-k">Output</span><p>A future ego trajectory.</p></div>
+          </div>
+          <p class="ch-sub">Within each track, all entries use the organizer-provided camera rig, controller, and vehicle model; participants cannot modify the controller or vehicle model.</p>
+        </div>
+
+        <div class="ch-block">
+          <h3 class="ch-h">Evaluation protocol</h3>
+          <p class="ch-sub">Each track ranks entries by mean private-pool Driving Score over three fixed seeds. Reported metrics and tie-breakers are specified in the <a href="#challenge">NavSafe-∞</a> and <a href="#gs-world">GS World</a> sections above.</p>
+        </div>
+
+        <div class="ch-block">
+          <h3 class="ch-h">Submission and rules</h3>
+          <dl class="ch-rules">
+            <div><dt>Submit</dt><dd>Code, weights, an environment file, and training-data declarations.</dd></div>
+            <div><dt>Abstract</dt><dd>A non-archival 2–4 page <a href="#papers">extended abstract</a> through OpenReview by the abstract deadline.</dd></div>
+            <div><dt>Private pools</dt><dd>Private pools never leave organizer servers.</dd></div>
+            <div><dt>Score visibility</dt><dd>Private-pool scores stay hidden until the deadline.</dd></div>
+            <div><dt>Verification</dt><dd>Top entries must pass an independent rerun before awards.</dd></div>
+            <div><dt>Eligibility</dt><dd>Organizer entries are shown for reference only.</dd></div>
+            <div><dt>Contingency</dt><dd>If an evaluation server is delayed, organizers will rerun submitted packages offline on the private pool.</dd></div>
+            <div><dt>Licenses</dt><dd>Releases respect source-data and asset licenses.</dd></div>
+          </dl>
+        </div>
+
+        <div class="ch-block">
+          <h3 class="ch-h" id="challenge-timeline">Timeline</h3>
+          <p class="ch-sub">Both tracks follow the same dates. Submission deadlines are 23:59 Anywhere on Earth (AoE).</p>
+          <ol class="ch-timeline">
+            <li><time datetime="2027-02-01">Feb 1, 2027</time><span>Public pools, devkits, rules, and baseline adapters released</span></li>
+            <li><time datetime="2027-03-01">Mar 1, 2027</time><span>Evaluation opens</span></li>
+            <li><time datetime="2027-05-20">May 20, 2027</time><span>Final models due</span></li>
+            <li><time datetime="2027-05-27">May 27, 2027</time><span>Two-to-four-page extended abstracts due</span></li>
+            <li><time datetime="2027-06-03">Jun 3, 2027</time><span>Verified results and award notifications</span></li>
+            <li><time>Jun 20 or 21, 2027</time><span>Workshop presentations and awards</span></li>
+          </ol>
+        </div>
+
+        <div class="ch-foot">
+          <p class="caveat">Simulation results measure behavior under specified event distributions and modeling assumptions. They do not certify road safety or estimate real-world crash rates.</p>
+        </div>
       </div>
     </section>
 
