@@ -5,23 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="SafeLoop: Evaluating and Learning Safe Closed-Loop Driving with Simulation and World Models. A CVPR 2027 workshop with the NavSafe-∞ Closed-Loop Safety Challenge and a World Model Challenge."
+      content="SafeLoop: Evaluating and Learning Safe Closed-Loop Driving with Simulation and World Models. A CVPR 2027 workshop with the NavSafe-∞ and GS World closed-loop challenge tracks."
     />
     <title>SafeLoop · CVPR 2027 Workshop</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f1b33'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%23c9d1ff' stroke-width='3'/%3E%3Ccircle cx='24' cy='16' r='2.6' fill='%23fff'/%3E%3C/svg%3E" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f1b33'/%3E%3Cpath d='M28.20 16.00 L28.03 17.47 L27.53 18.81 L26.77 19.91 L25.83 20.70 L24.80 21.19 L23.75 21.38 L22.72 21.33 L21.75 21.08 L20.84 20.68 L20.01 20.17 L19.23 19.57 L18.52 18.91 L17.85 18.21 L17.21 17.49 L16.60 16.75 L16.00 16.00 L15.40 15.25 L14.79 14.51 L14.15 13.79 L13.48 13.09 L12.77 12.43 L11.99 11.83 L11.16 11.32 L10.25 10.92 L9.28 10.67 L8.25 10.62 L7.20 10.81 L6.17 11.30 L5.23 12.09 L4.47 13.19 L3.97 14.53 L3.80 16.00 L3.97 17.47 L4.47 18.81 L5.23 19.91 L6.17 20.70 L7.20 21.19 L8.25 21.38 L9.28 21.33 L10.25 21.08 L11.16 20.68 L11.99 20.17 L12.77 19.57 L13.48 18.91 L14.15 18.21 L14.79 17.49 L15.40 16.75 L16.00 16.00 L16.60 15.25 L17.21 14.51 L17.85 13.79 L18.52 13.09 L19.23 12.43 L20.01 11.83 L20.84 11.32 L21.75 10.92 L22.72 10.67 L23.75 10.62 L24.80 10.81 L25.83 11.30 L26.77 12.09 L27.53 13.19 L28.03 14.53Z' fill='none' stroke='%23fff' stroke-width='6.5' stroke-linejoin='round'/%3E%3Cpath d='M28.20 16.00 L28.03 17.47 L27.53 18.81 L26.77 19.91 L25.83 20.70 L24.80 21.19 L23.75 21.38 L22.72 21.33 L21.75 21.08 L20.84 20.68 L20.01 20.17 L19.23 19.57 L18.52 18.91 L17.85 18.21 L17.21 17.49 L16.60 16.75 L16.00 16.00 L15.40 15.25 L14.79 14.51 L14.15 13.79 L13.48 13.09 L12.77 12.43 L11.99 11.83 L11.16 11.32 L10.25 10.92 L9.28 10.67 L8.25 10.62 L7.20 10.81 L6.17 11.30 L5.23 12.09 L4.47 13.19 L3.97 14.53 L3.80 16.00 L3.97 17.47 L4.47 18.81 L5.23 19.91 L6.17 20.70 L7.20 21.19 L8.25 21.38 L9.28 21.33 L10.25 21.08 L11.16 20.68 L11.99 20.17 L12.77 19.57 L13.48 18.91 L14.15 18.21 L14.79 17.49 L15.40 16.75 L16.00 16.00 L16.60 15.25 L17.21 14.51 L17.85 13.79 L18.52 13.09 L19.23 12.43 L20.01 11.83 L20.84 11.32 L21.75 10.92 L22.72 10.67 L23.75 10.62 L24.80 10.81 L25.83 11.30 L26.77 12.09 L27.53 13.19 L28.03 14.53Z' fill='none' stroke='%234f63ff' stroke-width='4' stroke-linejoin='round'/%3E%3C/svg%3E" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Serif:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" />
-    <link rel="stylesheet" href="static/css/style.css?v=2026-10-31" />
+    <link rel="stylesheet" href="static/css/style.css?v=2026-11-05i" />
     <script>document.documentElement.classList.add("js");</script>
   </head>
 
   <body>
+    <svg class="svg-defs" width="0" height="0" aria-hidden="true" focusable="false">
+      <defs>
+        <filter id="lift" filterUnits="userSpaceOnUse" x="-1000" y="-1000" width="3000" height="3000" color-interpolation-filters="sRGB">
+          <feDropShadow dx="0" dy="3" stdDeviation="1.6" flood-color="#050a1a" flood-opacity="0.38" />
+        </filter>
+      </defs>
+    </svg>
     <!-- ======================= TOP NAVBAR ======================= -->
     <div class="scroll-progress" aria-hidden="true"></div>
     <nav class="navbar is-fixed-top site-nav" role="navigation" aria-label="Main">
@@ -39,9 +46,8 @@
             <a class="navbar-item" href="#about">About</a>
             <a class="navbar-item" href="#news">News</a>
             <a class="navbar-item" href="#program">Program</a>
-            <a class="navbar-item" href="#papers">Call for Abstracts</a>
-            <a class="navbar-item is-challenge" href="#challenge">NavSafe-∞</a>
-            <a class="navbar-item" href="#world-model">World Model</a>
+            <a class="navbar-item is-papers" href="#papers">Call for Abstracts</a>
+            <a class="navbar-item is-challenge" href="#challenge">Challenges</a>
             <a class="navbar-item" href="#organizers">Organizers</a>
           </div>
         </div>
@@ -57,20 +63,119 @@
               <p class="edition">1st Workshop Edition</p>
               <h1>SafeLoop</h1>
               <p class="tagline">Evaluating and Learning Safe Closed-Loop Driving with Simulation and World Models</p>
-              <p class="with">with the <strong>NavSafe-∞ Challenge</strong> and the <strong>World Model Challenge</strong></p>
+              <p class="with">with the <strong>NavSafe-∞</strong> and <strong>GS World</strong> challenge tracks</p>
               <div class="hero-actions">
                 <a class="button is-cta is-papers" href="#papers"><span>Call for Abstracts</span><span class="cta-dot" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
-                <a class="button is-cta is-challenge" href="#challenge"><span>NavSafe-∞ Challenge</span><span class="cta-dot" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+                <a class="button is-cta is-challenge" href="#challenge"><span>Challenge Tracks</span><span class="cta-dot" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
               </div>
-            </div>
-            <aside class="hero-card" aria-label="At a glance">
               <dl class="hero-facts">
                 <div><dt>Venue</dt><dd>Under review<span>Workshop proposal for CVPR 2027</span></dd></div>
                 <div><dt>Date</dt><dd>June 20 or 21, 2027<span>To be confirmed by CVPR</span></dd></div>
-                <div><dt>Format</dt><dd>Half day (afternoon), 13:30–17:30<span>In person; talks recorded</span></dd></div>
-                <div><dt>Challenge</dt><dd>Evaluation server opens March 1, 2027<span>On Hugging Face</span></dd></div>
+                <div><dt>Format</dt><dd>Half day (afternoon), 13:30–17:30<span>In person; recordings subject to speaker consent</span></dd></div>
+                <div><dt>Challenges</dt><dd>Evaluation opens March 1, 2027<span>Both challenge tracks</span></dd></div>
               </dl>
-            </aside>
+            </div>
+            <figure class="hero-art" aria-hidden="true">
+              <svg class="hero-loop" viewBox="0 0 600 460" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <radialGradient id="splat-a"><stop offset="0" stop-color="#a9b6ff" stop-opacity="0.95" /><stop offset="1" stop-color="#a9b6ff" stop-opacity="0" /></radialGradient>
+                  <radialGradient id="splat-b"><stop offset="0" stop-color="#7fd6b5" stop-opacity="0.9" /><stop offset="1" stop-color="#7fd6b5" stop-opacity="0" /></radialGradient>
+                  <radialGradient id="splat-c"><stop offset="0" stop-color="#ff8a7a" stop-opacity="0.9" /><stop offset="1" stop-color="#ff8a7a" stop-opacity="0" /></radialGradient>
+                </defs>
+
+                <!-- The closed loop: an infinity-shaped road, cut out like a sticker -->
+                <g filter="url(#lift)">
+                  <path d="M532.00 222.00 C532.00 229.86 531.08 238.02 529.37 245.59 C527.67 253.16 525.01 260.69 521.79 267.45 C518.56 274.20 514.46 280.59 510.03 286.14 C505.59 291.70 500.45 296.63 495.18 300.77 C489.91 304.91 484.14 308.29 478.40 310.97 C472.66 313.64 466.63 315.53 460.73 316.83 C454.83 318.14 448.83 318.69 443.00 318.78 C437.17 318.88 431.37 318.31 425.76 317.39 C420.16 316.47 414.66 314.99 409.37 313.25 C404.07 311.51 398.93 309.33 393.98 306.95 C389.02 304.57 384.25 301.84 379.63 298.97 C375.02 296.11 370.59 292.97 366.29 289.74 C361.99 286.50 357.86 283.07 353.83 279.57 C349.81 276.07 345.93 272.42 342.14 268.73 C338.34 265.03 334.68 261.23 331.06 257.41 C327.45 253.58 323.94 249.68 320.45 245.77 C316.97 241.85 313.56 237.89 310.15 233.93 C306.74 229.97 303.38 225.98 300.00 222.00 C296.62 218.02 293.26 214.03 289.85 210.07 C286.44 206.11 283.03 202.15 279.55 198.23 C276.06 194.32 272.55 190.42 268.94 186.59 C265.32 182.77 261.66 178.97 257.86 175.27 C254.07 171.58 250.19 167.93 246.17 164.43 C242.14 160.93 238.01 157.50 233.71 154.26 C229.41 151.03 224.98 147.89 220.37 145.03 C215.75 142.16 210.98 139.43 206.02 137.05 C201.07 134.67 195.93 132.49 190.63 130.75 C185.34 129.01 179.84 127.53 174.24 126.61 C168.63 125.69 162.83 125.12 157.00 125.22 C151.17 125.31 145.17 125.86 139.27 127.17 C133.37 128.47 127.34 130.36 121.60 133.03 C115.86 135.71 110.09 139.09 104.82 143.23 C99.55 147.37 94.41 152.30 89.97 157.86 C85.54 163.41 81.44 169.80 78.21 176.55 C74.99 183.31 72.33 190.84 70.63 198.41 C68.92 205.98 68.00 214.14 68.00 222.00 C68.00 229.86 68.92 238.02 70.63 245.59 C72.33 253.16 74.99 260.69 78.21 267.45 C81.44 274.20 85.54 280.59 89.97 286.14 C94.41 291.70 99.55 296.63 104.82 300.77 C110.09 304.91 115.86 308.29 121.60 310.97 C127.34 313.64 133.37 315.53 139.27 316.83 C145.17 318.14 151.17 318.69 157.00 318.78 C162.83 318.88 168.63 318.31 174.24 317.39 C179.84 316.47 185.34 314.99 190.63 313.25 C195.93 311.51 201.07 309.33 206.02 306.95 C210.98 304.57 215.75 301.84 220.37 298.97 C224.98 296.11 229.41 292.97 233.71 289.74 C238.01 286.50 242.14 283.07 246.17 279.57 C250.19 276.07 254.07 272.42 257.86 268.73 C261.66 265.03 265.32 261.23 268.94 257.41 C272.55 253.58 276.06 249.68 279.55 245.77 C283.03 241.85 286.44 237.89 289.85 233.93 C293.26 229.97 296.62 225.98 300.00 222.00 C303.38 218.02 306.74 214.03 310.15 210.07 C313.56 206.11 316.97 202.15 320.45 198.23 C323.94 194.32 327.45 190.42 331.06 186.59 C334.68 182.77 338.34 178.97 342.14 175.27 C345.93 171.58 349.81 167.93 353.83 164.43 C357.86 160.93 361.99 157.50 366.29 154.26 C370.59 151.03 375.02 147.89 379.63 145.03 C384.25 142.16 389.02 139.43 393.98 137.05 C398.93 134.67 404.07 132.49 409.37 130.75 C414.66 129.01 420.16 127.53 425.76 126.61 C431.37 125.69 437.17 125.12 443.00 125.22 C448.83 125.31 454.83 125.86 460.73 127.17 C466.63 128.47 472.66 130.36 478.40 133.03 C484.14 135.71 489.91 139.09 495.18 143.23 C500.45 147.37 505.59 152.30 510.03 157.86 C514.46 163.41 518.56 169.80 521.79 176.55 C525.01 183.31 527.67 190.84 529.37 198.41 C531.08 205.98 532.00 214.14 532.00 222.00 Z" fill="none" stroke="#fff" stroke-width="64" stroke-linejoin="round" />
+                  <path d="M532.00 222.00 C532.00 229.86 531.08 238.02 529.37 245.59 C527.67 253.16 525.01 260.69 521.79 267.45 C518.56 274.20 514.46 280.59 510.03 286.14 C505.59 291.70 500.45 296.63 495.18 300.77 C489.91 304.91 484.14 308.29 478.40 310.97 C472.66 313.64 466.63 315.53 460.73 316.83 C454.83 318.14 448.83 318.69 443.00 318.78 C437.17 318.88 431.37 318.31 425.76 317.39 C420.16 316.47 414.66 314.99 409.37 313.25 C404.07 311.51 398.93 309.33 393.98 306.95 C389.02 304.57 384.25 301.84 379.63 298.97 C375.02 296.11 370.59 292.97 366.29 289.74 C361.99 286.50 357.86 283.07 353.83 279.57 C349.81 276.07 345.93 272.42 342.14 268.73 C338.34 265.03 334.68 261.23 331.06 257.41 C327.45 253.58 323.94 249.68 320.45 245.77 C316.97 241.85 313.56 237.89 310.15 233.93 C306.74 229.97 303.38 225.98 300.00 222.00 C296.62 218.02 293.26 214.03 289.85 210.07 C286.44 206.11 283.03 202.15 279.55 198.23 C276.06 194.32 272.55 190.42 268.94 186.59 C265.32 182.77 261.66 178.97 257.86 175.27 C254.07 171.58 250.19 167.93 246.17 164.43 C242.14 160.93 238.01 157.50 233.71 154.26 C229.41 151.03 224.98 147.89 220.37 145.03 C215.75 142.16 210.98 139.43 206.02 137.05 C201.07 134.67 195.93 132.49 190.63 130.75 C185.34 129.01 179.84 127.53 174.24 126.61 C168.63 125.69 162.83 125.12 157.00 125.22 C151.17 125.31 145.17 125.86 139.27 127.17 C133.37 128.47 127.34 130.36 121.60 133.03 C115.86 135.71 110.09 139.09 104.82 143.23 C99.55 147.37 94.41 152.30 89.97 157.86 C85.54 163.41 81.44 169.80 78.21 176.55 C74.99 183.31 72.33 190.84 70.63 198.41 C68.92 205.98 68.00 214.14 68.00 222.00 C68.00 229.86 68.92 238.02 70.63 245.59 C72.33 253.16 74.99 260.69 78.21 267.45 C81.44 274.20 85.54 280.59 89.97 286.14 C94.41 291.70 99.55 296.63 104.82 300.77 C110.09 304.91 115.86 308.29 121.60 310.97 C127.34 313.64 133.37 315.53 139.27 316.83 C145.17 318.14 151.17 318.69 157.00 318.78 C162.83 318.88 168.63 318.31 174.24 317.39 C179.84 316.47 185.34 314.99 190.63 313.25 C195.93 311.51 201.07 309.33 206.02 306.95 C210.98 304.57 215.75 301.84 220.37 298.97 C224.98 296.11 229.41 292.97 233.71 289.74 C238.01 286.50 242.14 283.07 246.17 279.57 C250.19 276.07 254.07 272.42 257.86 268.73 C261.66 265.03 265.32 261.23 268.94 257.41 C272.55 253.58 276.06 249.68 279.55 245.77 C283.03 241.85 286.44 237.89 289.85 233.93 C293.26 229.97 296.62 225.98 300.00 222.00 C303.38 218.02 306.74 214.03 310.15 210.07 C313.56 206.11 316.97 202.15 320.45 198.23 C323.94 194.32 327.45 190.42 331.06 186.59 C334.68 182.77 338.34 178.97 342.14 175.27 C345.93 171.58 349.81 167.93 353.83 164.43 C357.86 160.93 361.99 157.50 366.29 154.26 C370.59 151.03 375.02 147.89 379.63 145.03 C384.25 142.16 389.02 139.43 393.98 137.05 C398.93 134.67 404.07 132.49 409.37 130.75 C414.66 129.01 420.16 127.53 425.76 126.61 C431.37 125.69 437.17 125.12 443.00 125.22 C448.83 125.31 454.83 125.86 460.73 127.17 C466.63 128.47 472.66 130.36 478.40 133.03 C484.14 135.71 489.91 139.09 495.18 143.23 C500.45 147.37 505.59 152.30 510.03 157.86 C514.46 163.41 518.56 169.80 521.79 176.55 C525.01 183.31 527.67 190.84 529.37 198.41 C531.08 205.98 532.00 214.14 532.00 222.00 Z" fill="none" stroke="#2f4279" stroke-width="50" stroke-linejoin="round" />
+                  <path d="M532.00 222.00 C532.00 229.86 531.08 238.02 529.37 245.59 C527.67 253.16 525.01 260.69 521.79 267.45 C518.56 274.20 514.46 280.59 510.03 286.14 C505.59 291.70 500.45 296.63 495.18 300.77 C489.91 304.91 484.14 308.29 478.40 310.97 C472.66 313.64 466.63 315.53 460.73 316.83 C454.83 318.14 448.83 318.69 443.00 318.78 C437.17 318.88 431.37 318.31 425.76 317.39 C420.16 316.47 414.66 314.99 409.37 313.25 C404.07 311.51 398.93 309.33 393.98 306.95 C389.02 304.57 384.25 301.84 379.63 298.97 C375.02 296.11 370.59 292.97 366.29 289.74 C361.99 286.50 357.86 283.07 353.83 279.57 C349.81 276.07 345.93 272.42 342.14 268.73 C338.34 265.03 334.68 261.23 331.06 257.41 C327.45 253.58 323.94 249.68 320.45 245.77 C316.97 241.85 313.56 237.89 310.15 233.93 C306.74 229.97 303.38 225.98 300.00 222.00 C296.62 218.02 293.26 214.03 289.85 210.07 C286.44 206.11 283.03 202.15 279.55 198.23 C276.06 194.32 272.55 190.42 268.94 186.59 C265.32 182.77 261.66 178.97 257.86 175.27 C254.07 171.58 250.19 167.93 246.17 164.43 C242.14 160.93 238.01 157.50 233.71 154.26 C229.41 151.03 224.98 147.89 220.37 145.03 C215.75 142.16 210.98 139.43 206.02 137.05 C201.07 134.67 195.93 132.49 190.63 130.75 C185.34 129.01 179.84 127.53 174.24 126.61 C168.63 125.69 162.83 125.12 157.00 125.22 C151.17 125.31 145.17 125.86 139.27 127.17 C133.37 128.47 127.34 130.36 121.60 133.03 C115.86 135.71 110.09 139.09 104.82 143.23 C99.55 147.37 94.41 152.30 89.97 157.86 C85.54 163.41 81.44 169.80 78.21 176.55 C74.99 183.31 72.33 190.84 70.63 198.41 C68.92 205.98 68.00 214.14 68.00 222.00 C68.00 229.86 68.92 238.02 70.63 245.59 C72.33 253.16 74.99 260.69 78.21 267.45 C81.44 274.20 85.54 280.59 89.97 286.14 C94.41 291.70 99.55 296.63 104.82 300.77 C110.09 304.91 115.86 308.29 121.60 310.97 C127.34 313.64 133.37 315.53 139.27 316.83 C145.17 318.14 151.17 318.69 157.00 318.78 C162.83 318.88 168.63 318.31 174.24 317.39 C179.84 316.47 185.34 314.99 190.63 313.25 C195.93 311.51 201.07 309.33 206.02 306.95 C210.98 304.57 215.75 301.84 220.37 298.97 C224.98 296.11 229.41 292.97 233.71 289.74 C238.01 286.50 242.14 283.07 246.17 279.57 C250.19 276.07 254.07 272.42 257.86 268.73 C261.66 265.03 265.32 261.23 268.94 257.41 C272.55 253.58 276.06 249.68 279.55 245.77 C283.03 241.85 286.44 237.89 289.85 233.93 C293.26 229.97 296.62 225.98 300.00 222.00 C303.38 218.02 306.74 214.03 310.15 210.07 C313.56 206.11 316.97 202.15 320.45 198.23 C323.94 194.32 327.45 190.42 331.06 186.59 C334.68 182.77 338.34 178.97 342.14 175.27 C345.93 171.58 349.81 167.93 353.83 164.43 C357.86 160.93 361.99 157.50 366.29 154.26 C370.59 151.03 375.02 147.89 379.63 145.03 C384.25 142.16 389.02 139.43 393.98 137.05 C398.93 134.67 404.07 132.49 409.37 130.75 C414.66 129.01 420.16 127.53 425.76 126.61 C431.37 125.69 437.17 125.12 443.00 125.22 C448.83 125.31 454.83 125.86 460.73 127.17 C466.63 128.47 472.66 130.36 478.40 133.03 C484.14 135.71 489.91 139.09 495.18 143.23 C500.45 147.37 505.59 152.30 510.03 157.86 C514.46 163.41 518.56 169.80 521.79 176.55 C525.01 183.31 527.67 190.84 529.37 198.41 C531.08 205.98 532.00 214.14 532.00 222.00 Z" fill="none" stroke="#e7ecff" stroke-width="3" stroke-dasharray="14 12" stroke-linecap="round" opacity="0.85" />
+                  <g transform="translate(500.4 296.4) rotate(138.5)" fill="#e7ecff"><rect x="-9" y="-19.0" width="18" height="4.6" rx="1.2" /><rect x="-9" y="-10.6" width="18" height="4.6" rx="1.2" /><rect x="-9" y="-2.2" width="18" height="4.6" rx="1.2" /><rect x="-9" y="6.2" width="18" height="4.6" rx="1.2" /><rect x="-9" y="14.6" width="18" height="4.6" rx="1.2" /></g>
+                </g>
+
+                <!-- Gaussian splats (GS World), inside the left lobe: three flat ellipses -->
+                <g class="sticker" transform="translate(176 222) rotate(-6) scale(1.2)">
+                  <g class="float" style="animation-delay:-1.2s">
+                    <g fill="#fff" filter="url(#lift)"><ellipse cx="-8" cy="-4" rx="32" ry="20" transform="rotate(-28 -8 -4)" /><ellipse cx="16" cy="12" rx="24" ry="16" transform="rotate(24 16 12)" /><ellipse cx="-10" cy="20" rx="18" ry="13" transform="rotate(-8 -10 20)" /></g>
+                    <ellipse cx="-8" cy="-4" rx="26" ry="14" transform="rotate(-28 -8 -4)" fill="#a9b6ff" /><ellipse cx="16" cy="12" rx="18" ry="10" transform="rotate(24 16 12)" fill="#7fd6b5" /><ellipse cx="-10" cy="20" rx="12" ry="7" transform="rotate(-8 -10 20)" fill="#ff8a7a" />
+                    <ellipse cx="-17.1" cy="-8.9" rx="7.3" ry="3.1" transform="rotate(-28 -8 -4)" fill="#fff" opacity="0.55" /><ellipse cx="9.7" cy="8.5" rx="5.0" ry="2.2" transform="rotate(24 16 12)" fill="#fff" opacity="0.55" /><ellipse cx="-14.2" cy="17.6" rx="3.4" ry="1.5" transform="rotate(-8 -10 20)" fill="#fff" opacity="0.55" />
+                  </g>
+                </g>
+
+
+                <!-- Camera (camera-only policy input), inside the right lobe -->
+                <g class="sticker" transform="translate(424 224) rotate(7)">
+                  <g class="float" style="animation-delay:-3.1s" filter="url(#lift)">
+                    <rect x="-15" y="-33" width="28" height="14" rx="5" fill="#4f63ff" stroke="#fff" stroke-width="6" paint-order="stroke" />
+                    <rect x="19" y="-30" width="11" height="8" rx="3" fill="#ff8a7a" stroke="#fff" stroke-width="5" paint-order="stroke" />
+                    <rect x="-38" y="-23" width="76" height="50" rx="12" fill="#4f63ff" stroke="#fff" stroke-width="7" paint-order="stroke" />
+                    <circle cx="2" cy="2" r="17" fill="#c9d1ff" />
+                    <circle cx="2" cy="2" r="10" fill="#13213c" />
+                    <circle cx="6" cy="-2" r="3" fill="#fff" />
+                  </g>
+                </g>
+
+                <!-- Rain cloud (adverse weather), top left -->
+                <g class="sticker" transform="translate(132 70) rotate(-5)">
+                  <g class="float" style="animation-delay:-0.4s">
+                    <g filter="url(#lift)">
+                      <g fill="#fff"><circle cx="-26" cy="6" r="25" /><circle cx="4" cy="-8" r="31" /><circle cx="34" cy="8" r="23" /><rect x="-46" y="4" width="98" height="30" rx="15" /></g>
+                      <g fill="#c9d1ff"><circle cx="-26" cy="6" r="19" /><circle cx="4" cy="-8" r="25" /><circle cx="34" cy="8" r="17" /><rect x="-40" y="9" width="86" height="19" rx="9.5" /></g>
+                    </g>
+                    <g class="rain" stroke="#a9b6ff" stroke-width="4" stroke-linecap="round">
+                      <line x1="-22" y1="40" x2="-26" y2="52" />
+                      <line x1="2" y1="44" x2="-2" y2="56" style="animation-delay:.45s" />
+                      <line x1="26" y1="40" x2="22" y2="52" style="animation-delay:.9s" />
+                    </g>
+                  </g>
+                </g>
+
+                <!-- Traffic light (traffic rules), top right -->
+                <g class="sticker" transform="translate(512 78) rotate(8)">
+                  <g class="float" style="animation-delay:-2.2s" filter="url(#lift)">
+                    <rect x="-20" y="-50" width="40" height="100" rx="14" fill="#22335f" stroke="#fff" stroke-width="7" paint-order="stroke" />
+                    <circle class="lamp lamp-stop" cy="-26" r="10" fill="#ff8a7a" />
+                    <circle class="lamp lamp-wait" cy="0" r="10" fill="#f1d7a7" />
+                    <circle class="lamp lamp-go" cy="26" r="10" fill="#7fd6b5" />
+                  </g>
+                </g>
+
+                <!-- Warning sign (safety-critical events), bottom left -->
+                <g class="sticker" transform="translate(96 384) rotate(-9)">
+                  <g class="float" style="animation-delay:-4.4s" filter="url(#lift)">
+                    <path d="M0 -38 L38 30 L-38 30 Z" fill="#ff8a7a" stroke="#fff" stroke-width="12" stroke-linejoin="round" paint-order="stroke" />
+                    <rect x="-4" y="-14" width="8" height="26" rx="4" fill="#13213c" />
+                    <circle cy="21" r="4.6" fill="#13213c" />
+                  </g>
+                </g>
+
+                <!-- Traffic cones (edited traffic scenarios), bottom right -->
+                <g class="sticker" transform="translate(494 386) rotate(6)">
+                  <g class="float" style="animation-delay:-5.2s" filter="url(#lift)">
+                    <g transform="translate(-20 0)">
+                      <path d="M-9 -30 L9 -30 L18 22 L-18 22 Z" fill="#ff8a7a" stroke="#fff" stroke-width="7" stroke-linejoin="round" paint-order="stroke" />
+                      <path d="M-11.5 -10 L11.5 -10 L13.5 2 L-13.5 2 Z" fill="#fff" />
+                      <rect x="-24" y="20" width="48" height="9" rx="4.5" fill="#ff8a7a" stroke="#fff" stroke-width="6" paint-order="stroke" />
+                    </g>
+                    <g transform="translate(24 10) scale(0.8)">
+                      <path d="M-9 -30 L9 -30 L18 22 L-18 22 Z" fill="#ff8a7a" stroke="#fff" stroke-width="8" stroke-linejoin="round" paint-order="stroke" />
+                      <path d="M-11.5 -10 L11.5 -10 L13.5 2 L-13.5 2 Z" fill="#fff" />
+                      <rect x="-24" y="20" width="48" height="9" rx="4.5" fill="#ff8a7a" stroke="#fff" stroke-width="7" paint-order="stroke" />
+                    </g>
+                  </g>
+                </g>
+
+                <!-- The ego car, driving the loop -->
+                <g class="ego-car" filter="url(#lift)">
+                  <g>
+                    <rect x="-19" y="-11" width="38" height="22" rx="7" fill="#4f63ff" stroke="#fff" stroke-width="5" paint-order="stroke" />
+                    <rect x="2" y="-8" width="9" height="16" rx="3" fill="#c9d1ff" />
+                    <rect x="-14" y="-8" width="7" height="16" rx="3" fill="#c9d1ff" opacity="0.7" />
+                    <circle cx="18" cy="-6" r="2" fill="#fff" />
+                    <circle cx="18" cy="6" r="2" fill="#fff" />
+                  </g>
+                  <animateMotion dur="16s" repeatCount="indefinite" rotate="auto" path="M532.00 222.00 C532.00 229.86 531.08 238.02 529.37 245.59 C527.67 253.16 525.01 260.69 521.79 267.45 C518.56 274.20 514.46 280.59 510.03 286.14 C505.59 291.70 500.45 296.63 495.18 300.77 C489.91 304.91 484.14 308.29 478.40 310.97 C472.66 313.64 466.63 315.53 460.73 316.83 C454.83 318.14 448.83 318.69 443.00 318.78 C437.17 318.88 431.37 318.31 425.76 317.39 C420.16 316.47 414.66 314.99 409.37 313.25 C404.07 311.51 398.93 309.33 393.98 306.95 C389.02 304.57 384.25 301.84 379.63 298.97 C375.02 296.11 370.59 292.97 366.29 289.74 C361.99 286.50 357.86 283.07 353.83 279.57 C349.81 276.07 345.93 272.42 342.14 268.73 C338.34 265.03 334.68 261.23 331.06 257.41 C327.45 253.58 323.94 249.68 320.45 245.77 C316.97 241.85 313.56 237.89 310.15 233.93 C306.74 229.97 303.38 225.98 300.00 222.00 C296.62 218.02 293.26 214.03 289.85 210.07 C286.44 206.11 283.03 202.15 279.55 198.23 C276.06 194.32 272.55 190.42 268.94 186.59 C265.32 182.77 261.66 178.97 257.86 175.27 C254.07 171.58 250.19 167.93 246.17 164.43 C242.14 160.93 238.01 157.50 233.71 154.26 C229.41 151.03 224.98 147.89 220.37 145.03 C215.75 142.16 210.98 139.43 206.02 137.05 C201.07 134.67 195.93 132.49 190.63 130.75 C185.34 129.01 179.84 127.53 174.24 126.61 C168.63 125.69 162.83 125.12 157.00 125.22 C151.17 125.31 145.17 125.86 139.27 127.17 C133.37 128.47 127.34 130.36 121.60 133.03 C115.86 135.71 110.09 139.09 104.82 143.23 C99.55 147.37 94.41 152.30 89.97 157.86 C85.54 163.41 81.44 169.80 78.21 176.55 C74.99 183.31 72.33 190.84 70.63 198.41 C68.92 205.98 68.00 214.14 68.00 222.00 C68.00 229.86 68.92 238.02 70.63 245.59 C72.33 253.16 74.99 260.69 78.21 267.45 C81.44 274.20 85.54 280.59 89.97 286.14 C94.41 291.70 99.55 296.63 104.82 300.77 C110.09 304.91 115.86 308.29 121.60 310.97 C127.34 313.64 133.37 315.53 139.27 316.83 C145.17 318.14 151.17 318.69 157.00 318.78 C162.83 318.88 168.63 318.31 174.24 317.39 C179.84 316.47 185.34 314.99 190.63 313.25 C195.93 311.51 201.07 309.33 206.02 306.95 C210.98 304.57 215.75 301.84 220.37 298.97 C224.98 296.11 229.41 292.97 233.71 289.74 C238.01 286.50 242.14 283.07 246.17 279.57 C250.19 276.07 254.07 272.42 257.86 268.73 C261.66 265.03 265.32 261.23 268.94 257.41 C272.55 253.58 276.06 249.68 279.55 245.77 C283.03 241.85 286.44 237.89 289.85 233.93 C293.26 229.97 296.62 225.98 300.00 222.00 C303.38 218.02 306.74 214.03 310.15 210.07 C313.56 206.11 316.97 202.15 320.45 198.23 C323.94 194.32 327.45 190.42 331.06 186.59 C334.68 182.77 338.34 178.97 342.14 175.27 C345.93 171.58 349.81 167.93 353.83 164.43 C357.86 160.93 361.99 157.50 366.29 154.26 C370.59 151.03 375.02 147.89 379.63 145.03 C384.25 142.16 389.02 139.43 393.98 137.05 C398.93 134.67 404.07 132.49 409.37 130.75 C414.66 129.01 420.16 127.53 425.76 126.61 C431.37 125.69 437.17 125.12 443.00 125.22 C448.83 125.31 454.83 125.86 460.73 127.17 C466.63 128.47 472.66 130.36 478.40 133.03 C484.14 135.71 489.91 139.09 495.18 143.23 C500.45 147.37 505.59 152.30 510.03 157.86 C514.46 163.41 518.56 169.80 521.79 176.55 C525.01 183.31 527.67 190.84 529.37 198.41 C531.08 205.98 532.00 214.14 532.00 222.00 Z" />
+                </g>
+              </svg>
+            </figure>
           </div>
         </div>
       </div>
@@ -82,55 +187,61 @@
       <div class="container is-max-desktop content">
         <h2 class="title">About</h2>
         <p>
-          How can we evaluate and improve safety when a driving policy's actions determine its future observations?
-          SafeLoop brings together vision, robotics, simulation, and transportation researchers around two challenge
-          tracks.
+          Advances in visual simulation and generative world models create new opportunities to train
+          autonomous-driving policies through interaction and evaluate their behavior under controlled conditions.
+          However, exploiting these capabilities for safer driving requires more than realistic observations: simulated
+          environments must support meaningful policy learning while exposing failures that emerge as perception,
+          action, and traffic dynamics interact. SafeLoop brings together researchers from computer vision, robot
+          learning, and autonomous driving to examine how simulation and world models can jointly advance policy
+          training and closed-loop safety evaluation.
+        </p>
+        <p>
+          Six confirmed invited speakers contribute complementary expertise in simulation-based policy learning, world
+          modeling, and visual perception. Two challenge tracks provide concrete settings for diagnosing policy safety
+          failures:
         </p>
         <div class="paper-tracks">
           <article class="paper-track">
             <span class="paper-tag">Challenge Track 1</span>
             <h4>NavSafe-∞ Closed-Loop Safety Challenge</h4>
-            <p>Driving policies are evaluated in closed loop on NavSafe-∞ safety-critical scenarios. <a href="#challenge">Challenge details</a></p>
+            <p>Evaluates responses to safety-critical traffic events. <a href="#navsafe">Track details</a></p>
           </article>
           <article class="paper-track">
             <span class="paper-tag">Challenge Track 2</span>
-            <h4>World Model Challenge</h4>
-            <p>A planned track on world models. Its scope and evaluation protocol are to be announced. <a href="#world-model">Track details</a></p>
+            <h4>GS World Adverse-Weather Closed-Loop Challenge</h4>
+            <p>Examines robustness to adverse weather and traffic-scenario edits through world-model-based simulation. <a href="#gs-world">Track details</a></p>
           </article>
         </div>
         <p>
-          Submissions are limited to non-archival two-to-four-page extended abstracts that accompany entries in these
-          two challenges. The afternoon program combines six 20-minute keynotes, oral sessions for both challenge
-          tracks, a coffee break, and a panel on evaluation quality. Participants will examine how the choice of
-          simulation environment affects closed-loop safety conclusions.
+          Together, these tracks connect behavioral and visual sources of failure, enabling discussion of what simulated
+          experience teaches a policy and what held-out evaluation reveals about its limitations. Through invited talks
+          and shared failure analyses, SafeLoop aims to establish reproducible evaluation practices and identify how
+          their findings can guide the training of safer driving policies.
         </p>
         <p>
-          SafeLoop focuses on evaluating and improving safety through closed-loop interaction between driving policies
-          and their environments. A policy's actions change its future observations, linking perception errors,
-          planning decisions, and recovery behavior. Recent studies expose gaps between offline prediction quality and
-          interactive driving performance, while generative simulation and data-driven evaluation create new
-          opportunities for systematic testing. For the CVPR community, the central question is how visual
-          representations, scene reconstruction, and world models translate into safer driving decisions. The workshop
-          brings together vision, robotics, and transportation researchers to compare methods, diagnose failures, and
-          identify effective interventions.
+          Advances in neural rendering and generative world models are expanding the role of simulation in autonomous
+          driving, from replaying recorded scenes to constructing interactive environments for policy learning and
+          evaluation. However, the value of these environments depends on more than visual realism. Because a driving
+          policy changes the states and observations it subsequently encounters, simulation must preserve the cues
+          needed for decision-making and represent the consequences of actions and interactions. This also complicates
+          evaluation: agreement with recorded trajectories alone can miss weaknesses in closed-loop behavior. SafeLoop
+          therefore focuses on three connected questions: which aspects of visual and behavioral fidelity matter for
+          policy learning; how simulation can expose failures under safety-critical interactions and environmental
+          changes; and which evaluation protocols yield reproducible evidence of policy robustness.
         </p>
 
         <h3 class="subtitle">Topics</h3>
-        <p>
-          The invited talks and discussions welcome perspectives from end-to-end and modular systems,
-          vision-language-action models, and diverse evaluation benchmarks. Topics include:
-        </p>
         <ul class="topic-list">
-          <li><strong>Safety-critical perception and uncertainty</strong></li>
-          <li><strong>Photorealistic and generative simulation</strong></li>
-          <li><strong>World models for closed-loop safety testing</strong></li>
-          <li><strong>Safety-event design and scenario coverage</strong></li>
-          <li><strong>Evaluation metrics and generalization</strong></li>
-          <li><strong>Safe end-to-end and vision-language-action driving</strong></li>
-          <li><strong>Closed-loop learning and adaptation</strong></li>
-          <li><strong>Safe planning and runtime safeguards</strong></li>
-          <li><strong>Recovery and rare-event robustness</strong></li>
-          <li><strong>Reproducible failure analysis and safety assurance</strong></li>
+          <li><strong>Neural rendering and sensor simulation</strong></li>
+          <li><strong>World models for policy learning and evaluation</strong></li>
+          <li><strong>Interactive traffic-agent behavior modeling</strong></li>
+          <li><strong>Reinforcement and imitation learning in simulation</strong></li>
+          <li><strong>Safety-critical scenario generation and coverage</strong></li>
+          <li><strong>Closed-loop evaluation of driving policies</strong></li>
+          <li><strong>Simulation fidelity and safety metrics</strong></li>
+          <li><strong>Robustness to adverse weather and distribution shift</strong></li>
+          <li><strong>Failure analysis and recovery behavior</strong></li>
+          <li><strong>Reproducible benchmarks and evaluation protocols</strong></li>
         </ul>
 
         <h3 class="subtitle">Outcomes</h3>
@@ -153,8 +264,9 @@
           learning, world modeling, and transportation safety.
         </p>
         <p>
-          The invited speakers span academic and industrial research, bringing complementary perspectives on
-          reinforcement learning, simulation, world models, and autonomous-driving perception.
+          The six invited speakers span academic and industrial research at TRI, NYU, NVIDIA, Applied Intuition, Waymo,
+          and UCSD, bringing complementary perspectives on reinforcement learning, simulation, world models, and
+          autonomous-driving perception.
         </p>
       </div>
     </section>
@@ -202,7 +314,7 @@
                   <a class="session-header" href="https://www.tri.global/about-us/dr-maani-ghaffari" target="_blank" rel="noopener">
                     <img class="session-avatar" src="static/img/people/ghaffari.jpg" alt="Maani Ghaffari" />
                     <div class="session-text">
-                      <span class="session-kicker"><span class="what">Keynote 1</span><span class="session-label is-keynote">Keynote</span></span>
+                      <span class="session-kicker"><span class="what">Keynote 1: Observation errors, dynamics, and the reliability in simulation</span><span class="session-label is-keynote">Keynote</span></span>
                       <p class="session-name">Maani Ghaffari</p>
                       <p class="session-affil">Toyota Research Institute</p>
                     </div>
@@ -219,7 +331,7 @@
                   <a class="session-header" href="https://www.eugenevinitsky.com/" target="_blank" rel="noopener">
                     <img class="session-avatar" src="static/img/people/vinitsky.jpg" alt="Eugene Vinitsky" />
                     <div class="session-text">
-                      <span class="session-kicker"><span class="what">Keynote 2</span><span class="session-label is-keynote">Keynote</span></span>
+                      <span class="session-kicker"><span class="what">Keynote 2: Sim-to-real transfer for scalable policy learning</span><span class="session-label is-keynote">Keynote</span></span>
                       <p class="session-name">Eugene Vinitsky</p>
                       <p class="session-affil">New York University</p>
                     </div>
@@ -236,7 +348,7 @@
                   <a class="session-header" href="https://maximilianigl.com/" target="_blank" rel="noopener">
                     <img class="session-avatar" src="static/img/people/igl.jpg" alt="Maximilian Igl" />
                     <div class="session-text">
-                      <span class="session-kicker"><span class="what">Keynote 3</span><span class="session-label is-keynote">Keynote</span></span>
+                      <span class="session-kicker"><span class="what">Keynote 3: Reinforcement learning with world models</span><span class="session-label is-keynote">Keynote</span></span>
                       <p class="session-name">Maximilian Igl</p>
                       <p class="session-affil">NVIDIA</p>
                     </div>
@@ -248,7 +360,7 @@
             </tr>
             <tr class="challenge-row">
               <td class="t">14:35–15:05</td>
-              <td><span class="session-kicker"><span class="what">World Model Challenge Track</span><span class="session-label is-challenge-row">Challenge</span></span><span class="note">30-minute oral session; presentation format to be announced</span></td>
+              <td><span class="session-kicker"><span class="what">GS World Challenge Track: results and winning team presentations</span><span class="session-label is-challenge-row">Challenge</span></span></td>
             </tr>
             <tr class="break">
               <td class="t">15:05–15:35</td>
@@ -258,10 +370,27 @@
               <td class="t">15:35–15:55</td>
               <td>
                 <div class="session-card">
+                  <a class="session-header" href="https://zhanwei.site/" target="_blank" rel="noopener">
+                    <img class="session-avatar" src="static/img/people/zhan.jpg" alt="Wei Zhan" />
+                    <div class="session-text">
+                      <span class="session-kicker"><span class="what">Keynote 4: Reliable simulation-based safety evaluation</span><span class="session-label is-keynote">Keynote</span></span>
+                      <p class="session-name">Wei Zhan</p>
+                      <p class="session-affil">Applied Intuition</p>
+                    </div>
+                  </a>
+                  <details class="session-detail"><summary>Abstract</summary><p>To be announced.</p></details>
+                  <details class="session-detail"><summary>Speaker bio</summary><p>Wei Zhan is Co-Director of Berkeley DeepDrive, a leading research center on automotive AI involving many Berkeley faculty and industrial partners. He is also Co-Director of BAIR Center for Humanoid Intelligence, a new center combining leading humanoid robotics research labs towards robotic generalists. He is an Assistant Professional Researcher at UC Berkeley leading a team of Ph.D. students and Postdocs conducting research. He also teaches AI for Autonomy at UC Berkeley.</p><p>He is also Chief Scientist of Applied Intuition, a physical AI company delivering autonomy, toolchain and OS to various industrial verticals including passenger/trucking automotive, mining, construction, etc. He leads the research efforts towards next-generation physical AI for various products, and the Research Group of the company.</p><p>His research is focused on AI for scalable autonomous systems leveraging robotics, computer vision, machine learning and control techniques to tackle challenges with complex scenes, dynamics and human behavior with applications to autonomous driving and general robotics. He received his Ph.D. degree from UC Berkeley.</p></details>
+                </div>
+              </td>
+            </tr>
+            <tr class="keynote">
+              <td class="t">15:55–16:15</td>
+              <td>
+                <div class="session-card">
                   <a class="session-header" href="https://www.maxjiang.ml/" target="_blank" rel="noopener">
                     <img class="session-avatar" src="static/img/people/jiang.jpg" alt="Chiyu Max Jiang" />
                     <div class="session-text">
-                      <span class="session-kicker"><span class="what">Keynote 4</span><span class="session-label is-keynote">Keynote</span></span>
+                      <span class="session-kicker"><span class="what">Keynote 5: World foundation models for closed-loop evaluation</span><span class="session-label is-keynote">Keynote</span></span>
                       <p class="session-name">Chiyu Max Jiang</p>
                       <p class="session-affil">Waymo</p>
                     </div>
@@ -272,13 +401,13 @@
               </td>
             </tr>
             <tr class="keynote">
-              <td class="t">15:55–16:15</td>
+              <td class="t">16:15–16:35</td>
               <td>
                 <div class="session-card">
                   <a class="session-header" href="https://cseweb.ucsd.edu/~mkchandraker/" target="_blank" rel="noopener">
                     <img class="session-avatar" src="static/img/people/chandraker.jpg" alt="Manmohan Chandraker" />
                     <div class="session-text">
-                      <span class="session-kicker"><span class="what">Keynote 5</span><span class="session-label is-keynote">Keynote</span></span>
+                      <span class="session-kicker"><span class="what">Keynote 6: Geometric reasoning for safe closed-loop driving</span><span class="session-label is-keynote">Keynote</span></span>
                       <p class="session-name">Manmohan Chandraker</p>
                       <p class="session-affil">UC San Diego</p>
                     </div>
@@ -288,33 +417,12 @@
                 </div>
               </td>
             </tr>
-            <tr class="keynote">
-              <td class="t">16:15–16:35</td>
-              <td>
-                <div class="session-card">
-                  <div class="session-header">
-                    <span class="session-avatar is-empty" aria-hidden="true">TBD</span>
-                    <div class="session-text">
-                      <span class="session-kicker"><span class="what">Keynote 6</span><span class="session-label is-keynote">Keynote</span></span>
-                      <p class="session-name tba">Speaker TBD</p>
-                      <p class="session-affil">Affiliation to be announced</p>
-                    </div>
-                  </div>
-                  <details class="session-detail"><summary>Abstract</summary><p>To be announced.</p></details>
-                  <details class="session-detail"><summary>Speaker bio</summary><p>To be announced.</p></details>
-                </div>
-              </td>
-            </tr>
             <tr class="challenge-row">
               <td class="t">16:35–17:05</td>
-              <td><span class="session-kicker"><span class="what">NavSafe-∞ Challenge Track: results and failure analysis</span><span class="session-label is-challenge-row">Challenge</span></span><span class="note">Top three teams, eight minutes each, followed by six minutes of discussion</span></td>
-            </tr>
-            <tr class="interactive">
-              <td class="t">17:05–17:25</td>
-              <td><span class="session-kicker"><span class="what">Panel: Simulation quality and safety evaluation</span><span class="session-label is-interactive">Panel</span></span><span class="note">Participants from both challenge tracks and invited speakers</span></td>
+              <td><span class="session-kicker"><span class="what">NavSafe-∞ Challenge Track: results and winning team presentations</span><span class="session-label is-challenge-row">Challenge</span></span><span class="note">Top three teams, eight minutes each, followed by six minutes of discussion</span></td>
             </tr>
             <tr class="general">
-              <td class="t">17:25–17:30</td>
+              <td class="t">17:05–17:30</td>
               <td><span class="session-kicker"><span class="what">Challenge awards and closing</span></span></td>
             </tr>
           </tbody>
@@ -329,7 +437,7 @@
         <h2 class="title">Call for Extended Abstracts</h2>
         <p>
           We accept only non-archival two-to-four-page extended abstracts, excluding references, that accompany entries
-          in the <a href="#challenge">NavSafe-∞</a> or <a href="#world-model">World Model</a> challenge. These abstracts
+          in the <a href="#navsafe">NavSafe-∞</a> or <a href="#gs-world">GS World</a> challenge. These abstracts
           serve as the challenge technical reports. There is no separate full-paper or general research submission
           track, and no proceedings publication.
         </p>
@@ -338,13 +446,13 @@
             <span class="paper-tag">Challenge Track 1</span>
             <h4>NavSafe-∞ entries</h4>
             <p class="paper-len">2–4 pages, excluding references</p>
-            <p>Non-archival. Due May 27, 2027, after final models are due on May 20.</p>
+            <p>Non-archival. Due May 27, 2027, one week after final models.</p>
           </article>
           <article class="paper-track">
             <span class="paper-tag">Challenge Track 2</span>
-            <h4>World Model entries</h4>
+            <h4>GS World entries</h4>
             <p class="paper-len">2–4 pages, excluding references</p>
-            <p>Non-archival. Dates will be announced with the challenge rules.</p>
+            <p>Non-archival. Due May 27, 2027, one week after final models.</p>
           </article>
         </div>
 
@@ -363,8 +471,12 @@
               <td>Methodological clarity, relevance to the chosen challenge, reproducibility, and analysis of results and failure cases.</td>
             </tr>
             <tr>
+              <td>Technical checks</td>
+              <td>Hongwei Ruan and Yuxin Bao coordinate NavSafe-∞ technical checks. Junzhe Wu and Ziyang Leng coordinate GS World technical checks.</td>
+            </tr>
+            <tr>
               <td>Conflicts</td>
-              <td>A non-conflicted chair handles conflicts. Organizer-authored entries receive independent oversight and are shown for reference only, without eligibility for challenge awards.</td>
+              <td>Luobin Wang and Walter Zimmer oversee abstract review and conflict handling. A non-conflicted chair handles conflicts. Organizer-authored entries receive independent oversight and are shown for reference only, without eligibility for challenge awards.</td>
             </tr>
             <tr>
               <td>Oral presentations</td>
@@ -387,11 +499,11 @@
 
         <h3 class="subtitle">Important Dates</h3>
         <ol class="ch-timeline is-light">
-          <li><time>May 20, 2027</time><span>NavSafe-∞ final models due</span></li>
-          <li><time>May 27, 2027</time><span>NavSafe-∞ extended abstracts due</span></li>
-          <li><time>Jun 3, 2027</time><span>NavSafe-∞ verified results and presentation notifications</span></li>
-          <li><time>TBD</time><span>World Model Challenge submission and review dates</span></li>
-          <li><time>Jun 20 or 21, 2027</time><span>Workshop</span></li>
+          <li><time>Mar 1, 2027</time><span>Evaluation opens for both tracks</span></li>
+          <li><time>May 20, 2027</time><span>Final models due</span></li>
+          <li><time>May 27, 2027</time><span>Extended abstracts due</span></li>
+          <li><time>Jun 3, 2027</time><span>Verified results and award notifications</span></li>
+          <li><time>Jun 20 or 21, 2027</time><span>Workshop presentations and awards</span></li>
         </ol>
         <p class="tba">All deadlines are 23:59 Anywhere on Earth (AoE).</p>
       </div>
@@ -401,13 +513,34 @@
     <section class="section is-dark challenge" id="challenge">
       <div class="container is-max-desktop">
         <header class="ch-head">
-          <p class="track-kicker">Challenge Track 1</p>
-          <h2 class="title">NavSafe-∞ Closed-Loop Safety Challenge</h2>
+          <h2 class="title">Challenge Tracks</h2>
+          <p class="ch-lead">
+            Two challenge tracks provide concrete settings for diagnosing policy safety failures. NavSafe-∞ evaluates
+            responses to safety-critical traffic events. GS World examines robustness to adverse weather and
+            traffic-scenario edits through world-model-based simulation. Both tracks share one policy interface, one
+            ranking rule, one submission process, and one timeline.
+          </p>
+          <div class="challenge-links">
+            <a class="button" href="#navsafe">Track 1: NavSafe-∞</a>
+            <a class="button" href="#gs-world">Track 2: GS World</a>
+            <a class="button" href="#challenge-rules">Rules for both tracks</a>
+          </div>
+        </header>
+
+        <!-- ---------- Track 1 ---------- -->
+        <div class="ch-track" id="navsafe">
+          <div class="ch-track-head">
+            <svg class="track-sticker" viewBox="-66 -46 132 92" aria-hidden="true"><g filter="url(#lift)" transform="rotate(-6)"><path d="M44.00 0.00 C44.00 2.24 43.59 4.66 42.89 6.72 C42.20 8.78 41.07 10.78 39.83 12.37 C38.59 13.97 37.02 15.30 35.46 16.28 C33.90 17.27 32.15 17.90 30.48 18.29 C28.82 18.68 27.09 18.72 25.47 18.61 C23.85 18.49 22.25 18.09 20.74 17.60 C19.24 17.11 17.80 16.41 16.44 15.65 C15.08 14.89 13.80 13.99 12.57 13.06 C11.35 12.13 10.20 11.11 9.08 10.07 C7.97 9.03 6.92 7.93 5.89 6.83 C4.86 5.72 3.88 4.58 2.90 3.45 C1.91 2.31 0.97 1.15 0.00 0.00 C-0.97 -1.15 -1.91 -2.31 -2.90 -3.45 C-3.88 -4.58 -4.86 -5.72 -5.89 -6.83 C-6.92 -7.93 -7.97 -9.03 -9.08 -10.07 C-10.20 -11.11 -11.35 -12.13 -12.57 -13.06 C-13.80 -13.99 -15.08 -14.89 -16.44 -15.65 C-17.80 -16.41 -19.24 -17.11 -20.74 -17.60 C-22.25 -18.09 -23.85 -18.49 -25.47 -18.61 C-27.09 -18.72 -28.82 -18.68 -30.48 -18.29 C-32.15 -17.90 -33.90 -17.27 -35.46 -16.28 C-37.02 -15.30 -38.59 -13.97 -39.83 -12.37 C-41.07 -10.78 -42.20 -8.78 -42.89 -6.72 C-43.59 -4.66 -44.00 -2.24 -44.00 -0.00 C-44.00 2.24 -43.59 4.66 -42.89 6.72 C-42.20 8.78 -41.07 10.78 -39.83 12.37 C-38.59 13.97 -37.02 15.30 -35.46 16.28 C-33.90 17.27 -32.15 17.90 -30.48 18.29 C-28.82 18.68 -27.09 18.72 -25.47 18.61 C-23.85 18.49 -22.25 18.09 -20.74 17.60 C-19.24 17.11 -17.80 16.41 -16.44 15.65 C-15.08 14.89 -13.80 13.99 -12.57 13.06 C-11.35 12.13 -10.20 11.11 -9.08 10.07 C-7.97 9.03 -6.92 7.93 -5.89 6.83 C-4.86 5.72 -3.88 4.58 -2.90 3.45 C-1.91 2.31 -0.97 1.15 -0.00 0.00 C0.97 -1.15 1.91 -2.31 2.90 -3.45 C3.88 -4.58 4.86 -5.72 5.89 -6.83 C6.92 -7.93 7.97 -9.03 9.08 -10.07 C10.20 -11.11 11.35 -12.13 12.57 -13.06 C13.80 -13.99 15.08 -14.89 16.44 -15.65 C17.80 -16.41 19.24 -17.11 20.74 -17.60 C22.25 -18.09 23.85 -18.49 25.47 -18.61 C27.09 -18.72 28.82 -18.68 30.48 -18.29 C32.15 -17.90 33.90 -17.27 35.46 -16.28 C37.02 -15.30 38.59 -13.97 39.83 -12.37 C41.07 -10.78 42.20 -8.78 42.89 -6.72 C43.59 -4.66 44.00 -2.24 44.00 0.00 Z" fill="none" stroke="#fff" stroke-width="21" stroke-linejoin="round" /><path d="M44.00 0.00 C44.00 2.24 43.59 4.66 42.89 6.72 C42.20 8.78 41.07 10.78 39.83 12.37 C38.59 13.97 37.02 15.30 35.46 16.28 C33.90 17.27 32.15 17.90 30.48 18.29 C28.82 18.68 27.09 18.72 25.47 18.61 C23.85 18.49 22.25 18.09 20.74 17.60 C19.24 17.11 17.80 16.41 16.44 15.65 C15.08 14.89 13.80 13.99 12.57 13.06 C11.35 12.13 10.20 11.11 9.08 10.07 C7.97 9.03 6.92 7.93 5.89 6.83 C4.86 5.72 3.88 4.58 2.90 3.45 C1.91 2.31 0.97 1.15 0.00 0.00 C-0.97 -1.15 -1.91 -2.31 -2.90 -3.45 C-3.88 -4.58 -4.86 -5.72 -5.89 -6.83 C-6.92 -7.93 -7.97 -9.03 -9.08 -10.07 C-10.20 -11.11 -11.35 -12.13 -12.57 -13.06 C-13.80 -13.99 -15.08 -14.89 -16.44 -15.65 C-17.80 -16.41 -19.24 -17.11 -20.74 -17.60 C-22.25 -18.09 -23.85 -18.49 -25.47 -18.61 C-27.09 -18.72 -28.82 -18.68 -30.48 -18.29 C-32.15 -17.90 -33.90 -17.27 -35.46 -16.28 C-37.02 -15.30 -38.59 -13.97 -39.83 -12.37 C-41.07 -10.78 -42.20 -8.78 -42.89 -6.72 C-43.59 -4.66 -44.00 -2.24 -44.00 -0.00 C-44.00 2.24 -43.59 4.66 -42.89 6.72 C-42.20 8.78 -41.07 10.78 -39.83 12.37 C-38.59 13.97 -37.02 15.30 -35.46 16.28 C-33.90 17.27 -32.15 17.90 -30.48 18.29 C-28.82 18.68 -27.09 18.72 -25.47 18.61 C-23.85 18.49 -22.25 18.09 -20.74 17.60 C-19.24 17.11 -17.80 16.41 -16.44 15.65 C-15.08 14.89 -13.80 13.99 -12.57 13.06 C-11.35 12.13 -10.20 11.11 -9.08 10.07 C-7.97 9.03 -6.92 7.93 -5.89 6.83 C-4.86 5.72 -3.88 4.58 -2.90 3.45 C-1.91 2.31 -0.97 1.15 -0.00 0.00 C0.97 -1.15 1.91 -2.31 2.90 -3.45 C3.88 -4.58 4.86 -5.72 5.89 -6.83 C6.92 -7.93 7.97 -9.03 9.08 -10.07 C10.20 -11.11 11.35 -12.13 12.57 -13.06 C13.80 -13.99 15.08 -14.89 16.44 -15.65 C17.80 -16.41 19.24 -17.11 20.74 -17.60 C22.25 -18.09 23.85 -18.49 25.47 -18.61 C27.09 -18.72 28.82 -18.68 30.48 -18.29 C32.15 -17.90 33.90 -17.27 35.46 -16.28 C37.02 -15.30 38.59 -13.97 39.83 -12.37 C41.07 -10.78 42.20 -8.78 42.89 -6.72 C43.59 -4.66 44.00 -2.24 44.00 0.00 Z" fill="none" stroke="#4f63ff" stroke-width="14" stroke-linejoin="round" /><path d="M44.00 0.00 C44.00 2.24 43.59 4.66 42.89 6.72 C42.20 8.78 41.07 10.78 39.83 12.37 C38.59 13.97 37.02 15.30 35.46 16.28 C33.90 17.27 32.15 17.90 30.48 18.29 C28.82 18.68 27.09 18.72 25.47 18.61 C23.85 18.49 22.25 18.09 20.74 17.60 C19.24 17.11 17.80 16.41 16.44 15.65 C15.08 14.89 13.80 13.99 12.57 13.06 C11.35 12.13 10.20 11.11 9.08 10.07 C7.97 9.03 6.92 7.93 5.89 6.83 C4.86 5.72 3.88 4.58 2.90 3.45 C1.91 2.31 0.97 1.15 0.00 0.00 C-0.97 -1.15 -1.91 -2.31 -2.90 -3.45 C-3.88 -4.58 -4.86 -5.72 -5.89 -6.83 C-6.92 -7.93 -7.97 -9.03 -9.08 -10.07 C-10.20 -11.11 -11.35 -12.13 -12.57 -13.06 C-13.80 -13.99 -15.08 -14.89 -16.44 -15.65 C-17.80 -16.41 -19.24 -17.11 -20.74 -17.60 C-22.25 -18.09 -23.85 -18.49 -25.47 -18.61 C-27.09 -18.72 -28.82 -18.68 -30.48 -18.29 C-32.15 -17.90 -33.90 -17.27 -35.46 -16.28 C-37.02 -15.30 -38.59 -13.97 -39.83 -12.37 C-41.07 -10.78 -42.20 -8.78 -42.89 -6.72 C-43.59 -4.66 -44.00 -2.24 -44.00 -0.00 C-44.00 2.24 -43.59 4.66 -42.89 6.72 C-42.20 8.78 -41.07 10.78 -39.83 12.37 C-38.59 13.97 -37.02 15.30 -35.46 16.28 C-33.90 17.27 -32.15 17.90 -30.48 18.29 C-28.82 18.68 -27.09 18.72 -25.47 18.61 C-23.85 18.49 -22.25 18.09 -20.74 17.60 C-19.24 17.11 -17.80 16.41 -16.44 15.65 C-15.08 14.89 -13.80 13.99 -12.57 13.06 C-11.35 12.13 -10.20 11.11 -9.08 10.07 C-7.97 9.03 -6.92 7.93 -5.89 6.83 C-4.86 5.72 -3.88 4.58 -2.90 3.45 C-1.91 2.31 -0.97 1.15 -0.00 0.00 C0.97 -1.15 1.91 -2.31 2.90 -3.45 C3.88 -4.58 4.86 -5.72 5.89 -6.83 C6.92 -7.93 7.97 -9.03 9.08 -10.07 C10.20 -11.11 11.35 -12.13 12.57 -13.06 C13.80 -13.99 15.08 -14.89 16.44 -15.65 C17.80 -16.41 19.24 -17.11 20.74 -17.60 C22.25 -18.09 23.85 -18.49 25.47 -18.61 C27.09 -18.72 28.82 -18.68 30.48 -18.29 C32.15 -17.90 33.90 -17.27 35.46 -16.28 C37.02 -15.30 38.59 -13.97 39.83 -12.37 C41.07 -10.78 42.20 -8.78 42.89 -6.72 C43.59 -4.66 44.00 -2.24 44.00 0.00 Z" fill="none" stroke="#e7ecff" stroke-width="1.8" stroke-dasharray="5 4.5" stroke-linecap="round" opacity="0.9" /></g></svg>
+            <div>
+              <p class="track-kicker">Challenge Track 1</p>
+              <h3 class="ch-track-title">NavSafe-∞ Closed-Loop Safety Challenge</h3>
+            </div>
+          </div>
           <p class="ch-lead">
             The NavSafe-∞ Closed-Loop Safety Challenge evaluates submitted driving policies in closed loop on the
-            photorealistic safety-critical scenarios of the NavSafe-∞ benchmark.
-            Evaluating all methods on shared scenarios will show which approaches improve collision avoidance, rule
-            compliance, and recovery, and which failure modes persist across policies.
+            photorealistic safety-critical scenarios of the NavSafe-∞ benchmark. Evaluating all methods on shared
+            scenarios will show which approaches improve collision avoidance, rule compliance, and recovery, and which
+            failure modes persist across policies.
           </p>
           <div class="challenge-links">
             <a class="button is-primary-action" href="https://huggingface.co/spaces/SafeLoop-workshop/NavSafe-infty-challenge-2027" target="_blank" rel="noopener">Challenge on Hugging Face</a>
@@ -415,142 +548,260 @@
             <a class="button" href="https://arxiv.org/abs/2609.26618" target="_blank" rel="noopener">Paper (arXiv)</a>
             <span class="button" disabled>Devkit: Feb 1, 2027</span>
           </div>
-        </header>
 
-        <div class="ch-stats">
-          <div><span class="n">280</span><span class="l">public scenarios</span></div>
-          <div><span class="n">28</span><span class="l">event types in 4 categories</span></div>
-          <div><span class="n">56</span><span class="l">planned private scenarios, 2 per type</span></div>
-          <div><span class="n">3</span><span class="l">fixed seeds</span></div>
-        </div>
+          <div class="ch-stats">
+            <div><span class="n">280</span><span class="l">public scenarios</span></div>
+            <div><span class="n">28</span><span class="l">event types in 4 categories</span></div>
+            <div><span class="n">56</span><span class="l">planned private scenarios, 2 per type</span></div>
+            <div><span class="n">3</span><span class="l">fixed seeds</span></div>
+          </div>
 
-        <div class="ch-block">
-          <h3 class="ch-h">Evaluation pools</h3>
-          <p class="ch-sub">Both pools cover the same 28 event types in four categories: Traffic Crashes, Vulnerable Road User Crashes, Traffic Violations, and Traffic Incidents.</p>
-          <div class="ch-pools">
-            <article class="ch-pool">
-              <span class="ch-tag">Released</span>
-              <h4>Public pool</h4>
-              <p class="ch-pool-size">The 280 published scenarios</p>
-              <p>Released on February 1, 2027, together with the devkit and baseline adapters. Use it to validate your policy and to compare with the 20 policies in the NavSafe-∞ paper.</p>
-              <p class="ch-pool-role"><span>Used for</span>Validation and comparison</p>
-            </article>
-            <article class="ch-pool is-private">
-              <span class="ch-tag">Held by the organizers</span>
-              <h4>Private pool</h4>
-              <p class="ch-pool-size">A planned 56 unreleased scenarios: 28 event types × two scenarios per type</p>
-              <p>The private pool never leaves organizer servers.</p>
-              <p class="ch-pool-role"><span>Used for</span>Final ranking</p>
-            </article>
+          <div class="ch-block">
+            <h4 class="ch-h">Evaluation pools</h4>
+            <p class="ch-sub">Both pools cover the same 28 event types in four categories: Traffic Crashes, Vulnerable Road User Crashes, Traffic Violations, and Traffic Incidents.</p>
+            <div class="ch-pools">
+              <article class="ch-pool">
+                <span class="ch-tag">Released</span>
+                <h4>Public pool</h4>
+                <p class="ch-pool-size">The 280 published scenarios</p>
+                <p>Use it to validate your policy and to compare with the 20 policies in the NavSafe-∞ paper.</p>
+                <p class="ch-pool-role"><span>Used for</span>Validation and comparison</p>
+              </article>
+              <article class="ch-pool is-private">
+                <span class="ch-tag">Held by the organizers</span>
+                <h4>Private pool</h4>
+                <p class="ch-pool-size">A planned 56 unreleased scenarios: 28 event types × two scenarios per type</p>
+                <p>The private pool never leaves organizer servers.</p>
+                <p class="ch-pool-role"><span>Used for</span>Final ranking</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="ch-block">
+            <h4 class="ch-h">Training and compute</h4>
+            <div class="ch-two">
+              <div class="ch-panel">
+                <h4>Training data</h4>
+                <p class="ch-panel-text">The NAVSIM/OpenScene training split, and any declared external datasets or pretrained models.</p>
+              </div>
+              <div class="ch-panel is-warn">
+                <h4>Not provided or not allowed</h4>
+                <ul class="ch-x">
+                  <li>LiDAR, privileged scene state, ground-truth tracks, and future trajectories are not provided</li>
+                  <li>Training on NavSafe data, evaluation logs, or score feedback</li>
+                </ul>
+              </div>
+            </div>
+            <ul class="ch-list">
+              <li>Each submission must run offline on a single NVIDIA RTX 3090 (24 GB).</li>
+              <li>Models are submitted through the <a href="https://huggingface.co/spaces/SafeLoop-workshop/NavSafe-infty-challenge-2027" target="_blank" rel="noopener">Hugging Face portal</a>.</li>
+              <li>One validation submission per day, up to ten in total. Each team chooses one final model.</li>
+            </ul>
+          </div>
+
+          <div class="ch-block">
+            <h4 class="ch-h">Metrics</h4>
+            <div class="ch-two">
+              <div class="ch-panel">
+                <h4>Reported for every entry</h4>
+                <ul class="ch-chips">
+                  <li class="is-key">Driving Score (DS)</li>
+                  <li class="is-key">Success Rate (SR)</li>
+                  <li class="is-key">Driving Efficiency (DE)</li>
+                  <li class="is-key">Comfort</li>
+                  <li>Four category scores</li>
+                </ul>
+              </div>
+              <div class="ch-panel">
+                <h4>Tie-breakers</h4>
+                <ol class="ch-rank">
+                  <li><strong>Success Rate</strong></li>
+                  <li>Then the <strong>lowest category score</strong></li>
+                </ol>
+              </div>
+            </div>
+            <ul class="ch-list">
+              <li>Scoring follows the NavSafe-∞ paper. A human driver reference is also evaluated.</li>
+              <li>Public videos are screened for identifying information. Documentation reports geographic coverage and vulnerable-road-user representation.</li>
+            </ul>
+          </div>
+
+          <div class="ch-block">
+            <h4 class="ch-h">Awards</h4>
+            <div class="ch-awards">
+              <div><span class="place">1st</span><span class="what">place</span></div>
+              <div><span class="place">2nd</span><span class="what">place</span></div>
+              <div><span class="place">3rd</span><span class="what">place</span></div>
+              <div class="is-repro"><span class="place">Reproducibility</span><span class="what">award for the most reproducible submission</span></div>
+            </div>
+            <p class="ch-sub">The top three teams present their methods and failure cases at the workshop. Recognition consists of workshop award certificates and highlighted presentations; the program does not depend on sponsored monetary prizes.</p>
           </div>
         </div>
 
-        <div class="ch-block">
-          <h3 class="ch-h">Policy interface</h3>
-          <div class="ch-flow">
-            <div class="ch-step">
-              <span class="ch-k">Input</span>
-              <p>Rendered camera images, calibration, ego-state history, and a route instruction.</p>
-            </div>
-            <span class="ch-arrow" aria-hidden="true"></span>
-            <div class="ch-step is-policy">
-              <span class="ch-k">Your policy</span>
-              <p>Code, weights, and an environment file, run offline on a single NVIDIA RTX 3090 (24 GB).</p>
-            </div>
-            <span class="ch-arrow" aria-hidden="true"></span>
-            <div class="ch-step">
-              <span class="ch-k">Output</span>
-              <p>A future ego trajectory.</p>
+        <!-- ---------- Track 2 ---------- -->
+        <div class="ch-track" id="gs-world">
+          <div class="ch-track-head">
+            <svg class="track-sticker" viewBox="-66 -52 132 108" aria-hidden="true"><g transform="rotate(-5)"><g filter="url(#lift)"><g fill="#fff"><circle cx="-26" cy="6" r="25" /><circle cx="4" cy="-8" r="31" /><circle cx="34" cy="8" r="23" /><rect x="-46" y="4" width="98" height="30" rx="15" /></g><g fill="#c9d1ff"><circle cx="-26" cy="6" r="19" /><circle cx="4" cy="-8" r="25" /><circle cx="34" cy="8" r="17" /><rect x="-40" y="9" width="86" height="19" rx="9.5" /></g></g><g stroke="#a9b6ff" stroke-width="4" stroke-linecap="round"><line x1="-22" y1="40" x2="-26" y2="48" /><line x1="2" y1="42" x2="-2" y2="50" /><line x1="26" y1="40" x2="22" y2="48" /></g></g></svg>
+            <div>
+              <p class="track-kicker">Challenge Track 2</p>
+              <h3 class="ch-track-title">GS World Adverse-Weather Closed-Loop Challenge</h3>
             </div>
           </div>
-          <p class="ch-sub">All entries share the same camera rig, controller, and vehicle model.</p>
+          <p class="ch-lead">
+            The GS World Challenge evaluates visual and control robustness under adverse weather combined with
+            traffic-scenario edits. It tests how adverse weather affects visual and control robustness and the safe
+            handling of edited traffic scenarios.
+          </p>
+          <div class="challenge-links">
+            <span class="button" disabled>Challenge page: coming soon</span>
+            <span class="button" disabled>Devkit: Feb 1, 2027</span>
+          </div>
 
-          <div class="ch-two">
-            <div class="ch-panel">
-              <h4>Training data</h4>
-              <p class="ch-panel-text">The NAVSIM/OpenScene training split, and any declared external datasets or pretrained models.</p>
+          <div class="ch-stats">
+            <div><span class="n">1,000</span><span class="l">public scenarios</span></div>
+            <div><span class="n">13</span><span class="l">task types</span></div>
+            <div><span class="n">78</span><span class="l">private scenarios</span></div>
+            <div><span class="n">3</span><span class="l">fixed seeds</span></div>
+          </div>
+
+          <div class="ch-block">
+            <h4 class="ch-h">Dataset</h4>
+            <p class="ch-sub">Scenes from Waymo, PAI, and nuScenes cover 13 task types, including vehicle and pedestrian interactions, signal and intersection tasks, constrained-road maneuvers, and special-vehicle encounters. Every task has weather variants, with appearances generated from edited 4DGS renderings via structure-preserving video style transfer.</p>
+            <div class="ch-pools">
+              <article class="ch-pool">
+                <span class="ch-tag">Released</span>
+                <h4>Public pool</h4>
+                <p class="ch-pool-size">1,000 scenarios</p>
+                <p>Use it for evaluation and comparison.</p>
+                <p class="ch-pool-role"><span>Used for</span>Evaluation and comparison</p>
+              </article>
+              <article class="ch-pool is-private">
+                <span class="ch-tag">Held by the organizers</span>
+                <h4>Private pool</h4>
+                <p class="ch-pool-size">78 scenarios: three environmental conditions × 13 task types × two instances per type and condition</p>
+                <p>The private pool never leaves organizer servers.</p>
+                <p class="ch-pool-role"><span>Used for</span>Final ranking</p>
+              </article>
             </div>
-            <div class="ch-panel is-warn">
-              <h4>Not provided or not allowed</h4>
-              <ul class="ch-x">
-                <li>LiDAR</li>
-                <li>Privileged scene state</li>
-                <li>Ground-truth tracks</li>
-                <li>Future trajectories</li>
-                <li>Training on NavSafe data, evaluation logs, or score feedback</li>
-              </ul>
+          </div>
+
+          <div class="ch-block">
+            <h4 class="ch-h">Training and compute</h4>
+            <div class="ch-two">
+              <div class="ch-panel is-warn">
+                <h4>Evaluation only</h4>
+                <p class="ch-panel-text">GS World scenarios are evaluation-only and may not be used for training.</p>
+              </div>
+              <div class="ch-panel">
+                <h4>Hardware</h4>
+                <p class="ch-panel-text">Evaluation uses a single NVIDIA RTX PRO 6000 GPU.</p>
+              </div>
             </div>
+          </div>
+
+          <div class="ch-block">
+            <h4 class="ch-h">Metrics</h4>
+            <div class="ch-two">
+              <div class="ch-panel">
+                <h4>Reported for every entry</h4>
+                <ul class="ch-chips">
+                  <li class="is-key">Driving Score (DS)</li>
+                  <li class="is-key">Task Progress (TP)</li>
+                  <li class="is-key">Collision</li>
+                  <li class="is-key">Comfort</li>
+                  <li class="is-key">Runtime</li>
+                </ul>
+              </div>
+              <div class="ch-panel">
+                <h4>Tie-breakers</h4>
+                <ol class="ch-rank">
+                  <li><strong>Task Progress</strong></li>
+                  <li>Then <strong>Comfort</strong></li>
+                  <li>Then the <strong>lower Runtime</strong></li>
+                </ol>
+              </div>
+            </div>
+            <ul class="ch-list">
+              <li>Task Progress credits rule-compliant task stages. A collision stops the rollout; completed stages keep their credit.</li>
+              <li>Matched nominal-weather and adverse-weather diagnostics on the same traffic edits separate appearance sensitivity from task difficulty. These diagnostics do not change the ranking rule.</li>
+              <li>Synthetic-weather and vehicle-model assumptions are documented.</li>
+            </ul>
+          </div>
+
+          <div class="ch-block">
+            <h4 class="ch-h">Awards</h4>
+            <p class="ch-soon">Coming soon. Award categories for GS World will be announced with the challenge page.</p>
           </div>
         </div>
 
-        <div class="ch-block">
-          <h3 class="ch-h">Evaluation and ranking</h3>
-          <div class="ch-two">
-            <div class="ch-panel">
-              <h4>Ranking order</h4>
-              <ol class="ch-rank">
-                <li><strong>Mean private-pool Driving Score</strong> over three fixed seeds</li>
-                <li>If tied: <strong>Success Rate</strong></li>
-                <li>If still tied: the <strong>lowest category score</strong></li>
-              </ol>
+        <!-- ---------- Rules for both tracks ---------- -->
+        <div class="ch-track" id="challenge-rules">
+          <p class="track-kicker">Both tracks</p>
+          <h3 class="ch-track-title">Rules for both tracks</h3>
+
+          <div class="ch-block">
+            <h4 class="ch-h">Policy interface</h4>
+            <div class="ch-flow">
+              <div class="ch-step">
+                <span class="ch-k">Input</span>
+                <p>Rendered camera images, calibration, ego-state history, and a route instruction.</p>
+              </div>
+              <span class="ch-arrow" aria-hidden="true"></span>
+              <div class="ch-step is-policy">
+                <span class="ch-k">Your policy</span>
+                <p>Code, weights, and an environment file, run offline on the track hardware.</p>
+              </div>
+              <span class="ch-arrow" aria-hidden="true"></span>
+              <div class="ch-step">
+                <span class="ch-k">Output</span>
+                <p>A future ego trajectory.</p>
+              </div>
             </div>
-            <div class="ch-panel">
-              <h4>Reported for every entry</h4>
-              <ul class="ch-chips">
-                <li class="is-key">Driving Score (DS)</li>
-                <li class="is-key">Success Rate (SR)</li>
-                <li class="is-key">Driving Efficiency (DE)</li>
-                <li class="is-key">Comfort</li>
-                <li>Four category scores</li>
-              </ul>
-            </div>
+            <p class="ch-sub">Within each track, all entries use the organizer's fixed camera rig, controller, and vehicle model. Participants cannot modify the controller or vehicle model.</p>
           </div>
-          <ul class="ch-list">
-            <li>Scoring follows the NavSafe-∞ paper.</li>
-            <li>A human driver reference is also evaluated.</li>
-          </ul>
-        </div>
 
-        <div class="ch-block">
-          <h3 class="ch-h">Submission and rules</h3>
-          <dl class="ch-rules">
-            <div><dt>Submit</dt><dd>Code, weights, and an environment file (e.g., Conda or pip) through the <a href="https://huggingface.co/spaces/SafeLoop-workshop/NavSafe-infty-challenge-2027" target="_blank" rel="noopener">Hugging Face portal</a>, together with a 2–4 page <a href="#papers">extended abstract</a> through OpenReview by the abstract deadline.</dd></div>
-            <div><dt>Compute</dt><dd>Each submission must run offline on a single NVIDIA RTX 3090 (24 GB).</dd></div>
-            <div><dt>Limits</dt><dd>One validation submission per day, up to ten in total. Each team chooses one final model.</dd></div>
-            <div><dt>Score visibility</dt><dd>Private-pool scores stay hidden until the deadline.</dd></div>
-            <div><dt>Verification</dt><dd>Top entries must pass an independent rerun before awards.</dd></div>
-            <div><dt>Eligibility</dt><dd>Organizer entries are shown for reference only.</dd></div>
-            <div><dt>Ethics</dt><dd>Releases respect source-data and asset licenses. Public videos are screened for identifying information. Documentation reports geographic coverage and vulnerable-road-user representation.</dd></div>
-          </dl>
-        </div>
-
-        <div class="ch-block">
-          <h3 class="ch-h">Awards</h3>
-          <div class="ch-awards">
-            <div><span class="place">1st</span><span class="what">place</span></div>
-            <div><span class="place">2nd</span><span class="what">place</span></div>
-            <div><span class="place">3rd</span><span class="what">place</span></div>
-            <div class="is-repro"><span class="place">Reproducibility</span><span class="what">award for the most reproducible submission</span></div>
+          <div class="ch-block">
+            <h4 class="ch-h">Ranking, submission, and integrity</h4>
+            <dl class="ch-rules">
+              <div><dt>Ranking</dt><dd>Each track ranks entries by mean private-pool Driving Score over three fixed seeds, with its own tie-breakers.</dd></div>
+              <div><dt>Evaluation specification</dt><dd>Before evaluation opens, each track publishes its exact score formula, termination and timeout rules, inference budget, collision definition, and tie tolerance.</dd></div>
+              <div><dt>Baselines</dt><dd>Baseline adapters include a complete sample submission and a measured runtime report on the track hardware.</dd></div>
+              <div><dt>Reporting</dt><dd>Results report scenario-level variation and category or condition breakdowns with the aggregate score. The three seeds measure rollout variation; they are not three independent scenario sets.</dd></div>
+              <div><dt>Score visibility</dt><dd>Private pools never leave organizer servers. Private-pool scores stay hidden until the deadline.</dd></div>
+              <div><dt>Submit</dt><dd>Code, weights, and an environment file (e.g., Conda or pip), together with a 2–4 page <a href="#papers">extended abstract</a> through OpenReview by the abstract deadline.</dd></div>
+              <div><dt>Verification</dt><dd>Top entries must pass an independent rerun before awards.</dd></div>
+              <div><dt>Eligibility</dt><dd>Organizer entries are shown for reference only.</dd></div>
+              <div><dt>Data licenses</dt><dd>Releases respect source-data and asset licenses. For scenes that cannot be redistributed, the devkit provides acquisition instructions and local processing scripts, or keeps those scenes on the evaluation server. Access to source data does not imply permission to redistribute edited renderings.</dd></div>
+            </dl>
           </div>
-          <p class="ch-sub">The top three teams present their methods and failure cases at the workshop. Prizes and sponsors will be announced.</p>
-        </div>
 
-        <div class="ch-block">
-          <h3 class="ch-h">Timeline</h3>
-          <ol class="ch-timeline">
-            <li><time>Feb 1, 2027</time><span>Public pool, devkit, rules, and baselines released</span></li>
-            <li><time>Mar 1, 2027</time><span>Evaluation server opens on Hugging Face</span></li>
-            <li><time>May 20, 2027</time><span>Final models due</span></li>
-            <li><time>May 27, 2027</time><span>Two-to-four-page extended abstracts due</span></li>
-            <li><time>Jun 3, 2027</time><span>Verified results and award notifications</span></li>
-            <li><time>Jun 20 or 21, 2027</time><span>Workshop presentations and awards</span></li>
-          </ol>
+          <div class="ch-block">
+            <h4 class="ch-h">If plans change</h4>
+            <dl class="ch-rules">
+              <div><dt>Evaluation server delay</dt><dd>If an evaluation server is delayed, the organizers rerun submitted packages offline on the private pool.</dd></div>
+              <div><dt>Data release delay</dt><dd>If dataset preparation or redistribution permissions are delayed, each track releases a license-cleared subset with working baseline adapters on the announced release date and publishes a revised coverage statement.</dd></div>
+              <div><dt>Evaluation not ready</dt><dd>If a track cannot support its advertised evaluation by March 1, its session presents a clearly labeled benchmark status and baseline failure analysis, without a competitive ranking or awards. Any scope changes are announced to all teams before evaluation opens.</dd></div>
+            </dl>
+          </div>
+
+          <div class="ch-block">
+            <h4 class="ch-h">Timeline</h4>
+            <ol class="ch-timeline">
+              <li><time>Feb 1, 2027</time><span>Public pools, devkits, rules, and baseline adapters released</span></li>
+              <li><time>Mar 1, 2027</time><span>Evaluation opens</span></li>
+              <li><time>May 20, 2027</time><span>Final models due</span></li>
+              <li><time>May 27, 2027</time><span>Two-to-four-page extended abstracts due</span></li>
+              <li><time>Jun 3, 2027</time><span>Verified results and award notifications</span></li>
+              <li><time>Jun 20 or 21, 2027</time><span>Workshop presentations and awards</span></li>
+            </ol>
+            <p class="ch-sub">Submission deadlines are at 23:59 Anywhere on Earth (AoE).</p>
+          </div>
         </div>
 
         <div class="ch-foot">
           <p class="caveat">
-            Simulation results measure behavior under specified event distributions and modeling assumptions. They do
-            not certify road safety or estimate real-world crash rates.
+            Simulation results characterize the specified benchmark conditions and will not be presented as real-world
+            safety certification.
           </p>
           <details class="ch-cite">
             <summary>Cite NavSafe-∞</summary>
@@ -563,39 +814,6 @@
 }</pre>
           </details>
         </div>
-      </div>
-    </section>
-
-
-    <!-- ======================= WORLD MODEL CHALLENGE ======================= -->
-    <section class="section is-tinted" id="world-model">
-      <div class="container is-max-desktop content">
-        <p class="track-kicker">Challenge Track 2</p>
-        <h2 class="title">World Model Challenge</h2>
-        <p>
-          The second challenge track will focus on world models. Entries will be accompanied by non-archival
-          two-to-four-page extended abstracts under the common workshop format.
-        </p>
-        <table class="table kv">
-          <tbody>
-            <tr>
-              <td>Status</td>
-              <td><span class="tba">Planned. Details will be announced with the challenge rules.</span></td>
-            </tr>
-            <tr>
-              <td>To be announced</td>
-              <td>Scope, datasets, evaluation protocol and metrics, model-submission requirements, timeline, and awards.</td>
-            </tr>
-            <tr>
-              <td>At the workshop</td>
-              <td>A 30-minute oral session (14:35–15:05). The presentation format will be announced.</td>
-            </tr>
-            <tr>
-              <td>Extended abstracts</td>
-              <td>2–4 pages, non-archival, following the <a href="#papers">call for extended abstracts</a>.</td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     </section>
 
@@ -706,9 +924,9 @@
         </div>
 
         <h3 class="subtitle">Program Committee</h3>
-        <p>Tentative: Seth Z. Zhao, Luobin Wang, Hongwei Ruan, Yuxin Bao, Zewei Zhou, Walter Zimmer, Yu Zeng, and Rowan McAllister.</p>
+        <p>Tentative: Seth Z. Zhao, Luobin Wang, Hongwei Ruan, Yuxin Bao, Zewei Zhou, Walter Zimmer, Charlton Shih, Yu Zeng, and Rowan McAllister.</p>
         <p>Senior review coordinators: Bolei Zhou, Jiaqi Ma, and Henrik Christensen.</p>
-        <p class="tba">Additional external reviewers will be recruited as needed for the two challenges.</p>
+        <p class="tba">All named PC members and senior review coordinators come from the organizing team. External non-conflicted reviewers will be recruited where the organizing team cannot provide independent assessment.</p>
       </div>
     </section>
 
@@ -723,6 +941,6 @@
       </div>
     </footer>
 
-    <script src="static/js/main.js?v=2026-10-15b"></script>
+    <script src="static/js/main.js?v=2026-11-05"></script>
   </body>
 </html>

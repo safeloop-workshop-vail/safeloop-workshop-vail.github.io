@@ -51,6 +51,11 @@ document.addEventListener("DOMContentLoaded", () => {
     update();
   }
 
+  // The hero car drives the loop with SVG animation, which CSS cannot stop; pause it here.
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document.querySelectorAll("svg.hero-loop").forEach((svg) => svg.pauseAnimations && svg.pauseAnimations());
+  }
+
   // Fade content up as it enters the viewport; items that enter together are staggered.
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   const targets = document.querySelectorAll(

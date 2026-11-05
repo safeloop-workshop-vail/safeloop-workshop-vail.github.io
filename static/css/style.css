@@ -12,19 +12,38 @@
   --paper: #ffffff;
   --paper-2: #f5f7fa;
   --navy: #0f1b33;
-  --accent: #2846c8;
-  --challenge-tint: #eef1ff; /* challenge highlight on light backgrounds */
-  --challenge-ink: #2846c8;
 
-  /* schedule row tints */
+  /* One palette for the whole site, taken from the hero sticker illustration */
+  --blue: #4f63ff; /* brand and challenge color */
+  --blue-hover: #6274ff;
+  --blue-deep: #3445d6; /* text and links on white (passes AA contrast) */
+  --blue-darker: #2836b0; /* hover for deep blue */
+  --blue-soft: #c9d1ff;
+  --blue-tint: #eef1ff;
+  --blue-mist: #a9b6ff; /* blue on dark backgrounds */
+  --coral: #ff8a7a;
+  --coral-deep: #c4523f;
+  --coral-tint: #fdeeea;
+  --coral-hover: #ff9d8f;
+  --mint: #7fd6b5;
+  --mint-deep: #1f7f5c;
+  --mint-tint: #e7f5ef;
+
+  --accent: var(--blue-deep);
+  --challenge-tint: var(--blue-tint);
+  --challenge-ink: var(--blue-deep);
+  --challenge-solid: var(--blue); /* solid challenge buttons (top bar and hero) */
+  --challenge-solid-hover: var(--blue-hover);
+
+  /* schedule row tints: keynotes mint, breaks coral, challenges blue */
   --row-general: #f2f4f7;
-  --row-keynote: #e7f4ec;
-  --row-oral: #e6eefc;
-  --row-break: #fcf1e4;
-  --row-challenge: #efeafc;
-  --row-interactive: #e4f3f3;
+  --row-keynote: var(--mint-tint);
+  --row-oral: var(--blue-tint);
+  --row-break: var(--coral-tint);
+  --row-challenge: var(--blue-tint);
+  --row-interactive: var(--mint-tint);
 
-  --serif: "Newsreader", Georgia, serif;
+  --serif: "IBM Plex Serif", Georgia, serif; /* display face: formal, steady strokes, no sharp ends */
   --sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
@@ -51,7 +70,7 @@ a {
 }
 
 a:hover {
-  color: #1d349a;
+  color: var(--blue-darker);
   text-decoration: underline;
 }
 
@@ -118,23 +137,40 @@ h3.subtitle {
 }
 
 .site-nav a.navbar-item.is-challenge {
-  color: var(--challenge-ink);
+  color: #fff;
   font-weight: 600;
-  background: var(--challenge-tint);
-  box-shadow: inset 0 0 0 1px rgba(40, 70, 200, 0.18);
+  background: var(--challenge-solid);
   border-radius: 999px;
   margin: 0.6rem 0.35rem;
   padding: 0.25rem 0.95rem;
 }
 
+.site-nav a.navbar-item.is-papers {
+  color: var(--navy);
+  font-weight: 600;
+  background: var(--coral);
+  border-radius: 999px;
+  margin: 0.6rem 0.35rem;
+  padding: 0.25rem 0.95rem;
+}
+
+.site-nav a.navbar-item.is-papers:hover,
+.site-nav a.navbar-item.is-papers.is-active {
+  color: var(--navy);
+  background: var(--coral-hover);
+  text-decoration: none;
+}
+
 .site-nav a.navbar-item.is-challenge:hover,
 .site-nav a.navbar-item.is-challenge.is-active {
-  color: var(--challenge-ink);
-  background: #e2e7ff;
+  color: #fff;
+  background: var(--challenge-solid-hover);
+  text-decoration: none;
 }
 
 @media screen and (max-width: 1023px) {
-  .site-nav a.navbar-item.is-challenge {
+  .site-nav a.navbar-item.is-challenge,
+  .site-nav a.navbar-item.is-papers {
     display: inline-block;
     margin: 0.4rem 0.75rem;
   }
@@ -152,76 +188,10 @@ h3.subtitle {
   background: linear-gradient(180deg, #0d1830 0%, #11234a 100%);
 }
 
-/* Bird's-eye-view sensor grid: fine dots that fade in toward the bottom,
-   like a ground plane seen from above */
-.hero.site-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(rgba(201, 214, 255, 0.22) 1px, transparent 1.3px);
-  background-size: 22px 22px;
-  -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.55) 55%, #000 100%);
-  mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.55) 55%, #000 100%);
-  pointer-events: none;
-}
-
-/* A slow sensor sweep that rotates around a point below the hero */
-.hero.site-hero::after {
-  content: "";
-  position: absolute;
-  width: 1600px;
-  height: 1600px;
-  left: calc(72% - 800px);
-  bottom: -800px;
-  background: conic-gradient(
-    from 0deg,
-    rgba(132, 156, 255, 0.14) 0deg,
-    rgba(132, 156, 255, 0.04) 28deg,
-    transparent 46deg,
-    transparent 354deg,
-    rgba(132, 156, 255, 0.14) 360deg
-  );
-  border-radius: 50%;
-  animation: hero-sweep 16s linear infinite;
-  pointer-events: none;
-}
-
-@keyframes hero-sweep {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Narrow screens: the hero is tall, so pivot the sweep on the right edge,
-   halfway down, with a radius large enough to cover the whole hero */
-@media screen and (max-width: 768px) {
-  .hero.site-hero::after {
-    width: 2400px;
-    height: 2400px;
-    left: calc(78% - 1200px);
-    top: calc(58% - 1200px);
-    bottom: auto;
-    background: conic-gradient(
-      from 0deg,
-      rgba(132, 156, 255, 0.2) 0deg,
-      rgba(132, 156, 255, 0.06) 30deg,
-      transparent 50deg,
-      transparent 354deg,
-      rgba(132, 156, 255, 0.2) 360deg
-    );
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero.site-hero::after {
-    animation: none;
-  }
-}
-
 .site-hero .hero-body {
   position: relative;
   z-index: 1;
-  padding: 5rem 1.5rem 4.5rem;
+  padding: 4.5rem 1.5rem 4.5rem;
 }
 
 .site-hero .edition {
@@ -232,20 +202,25 @@ h3.subtitle {
 
 .site-hero h1 {
   font-family: var(--serif);
-  font-weight: 500;
+  font-weight: 600;
   font-size: clamp(3.4rem, 9vw, 5.6rem);
   line-height: 0.95;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.015em;
   color: #fff;
   margin-bottom: 1rem;
 }
 
+/* Subtitle in the sans face: the serif title above stays the one display moment,
+   and a medium-weight sans reads more easily over three lines on navy */
 .site-hero .tagline {
-  font-family: var(--serif);
-  font-size: clamp(1.35rem, 3vw, 1.95rem);
-  line-height: 1.25;
-  color: #fff;
-  margin-bottom: 0.5rem;
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  line-height: 1.4;
+  letter-spacing: -0.005em;
+  color: #e9edf8;
+  max-width: 30rem;
+  margin-bottom: 0.75rem;
 }
 
 .site-hero .with {
@@ -257,45 +232,33 @@ h3.subtitle {
   color: #fff;
 }
 
-/* Two columns: title on the left, an "at a glance" card on the right */
+/* Two columns: title and facts on the left, the sticker illustration on the right */
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
-  gap: 3rem;
-  align-items: end;
-}
-
-.hero-card {
-  border: 1px solid rgba(201, 214, 255, 0.22);
-  border-radius: 14px;
-  background: rgba(13, 24, 48, 0.55);
-  backdrop-filter: blur(6px);
-  padding: 0.4rem 1.25rem;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: center;
 }
 
 .hero-facts {
-  margin: 0;
-}
-
-.hero-facts > div {
   display: grid;
-  grid-template-columns: 5.5rem minmax(0, 1fr);
-  gap: 0.75rem;
-  padding: 0.85rem 0;
-}
-
-.hero-facts > div + div {
-  border-top: 1px dashed rgba(201, 214, 255, 0.2);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem 1.75rem;
+  margin: 2.5rem 0 0;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(201, 214, 255, 0.18);
+  max-width: 34rem;
 }
 
 .hero-facts dt {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #8ea0c4;
+  margin-bottom: 0.15rem;
 }
 
 .hero-facts dd {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.93rem;
   font-weight: 600;
   color: #fff;
   line-height: 1.4;
@@ -304,20 +267,93 @@ h3.subtitle {
 .hero-facts dd span {
   display: block;
   font-weight: 400;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: #a7b2c9;
+}
+
+.hero-art {
+  margin: 0;
+}
+
+.hero-loop {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
 }
 
 @media screen and (max-width: 900px) {
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 2.25rem;
+    gap: 1.5rem;
+  }
+  .hero-art {
+    order: -1;
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+}
+
+/* Sticker motion: each sticker floats a little, the rain falls, the light cycles */
+.hero-loop .float {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: sticker-float 6.5s ease-in-out infinite;
+}
+
+@keyframes sticker-float {
+  50% {
+    transform: translateY(-5px) rotate(1.5deg);
+  }
+}
+
+.hero-loop .rain line {
+  animation: rain-drop 1.35s linear infinite;
+}
+
+@keyframes rain-drop {
+  0% {
+    transform: translateY(-6px);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(14px);
+    opacity: 0;
+  }
+}
+
+.hero-loop .lamp {
+  opacity: 0.28;
+  animation: lamp 9s steps(1, end) infinite;
+}
+
+.hero-loop .lamp-go {
+  animation-delay: 0s;
+}
+
+.hero-loop .lamp-wait {
+  animation-delay: -6s;
+}
+
+.hero-loop .lamp-stop {
+  animation-delay: -3s;
+}
+
+@keyframes lamp {
+  0% {
+    opacity: 1;
+  }
+  33.33% {
+    opacity: 0.28;
   }
 }
 
 /* One orchestrated entrance for the hero content */
 .js .hero-main > *,
-.js .hero-card {
+.js .hero-art {
   opacity: 0;
   transform: translateY(14px);
   animation: hero-in 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
@@ -327,7 +363,8 @@ h3.subtitle {
 .js .hero-main > :nth-child(3) { animation-delay: 0.14s; }
 .js .hero-main > :nth-child(4) { animation-delay: 0.22s; }
 .js .hero-main > :nth-child(5) { animation-delay: 0.3s; }
-.js .hero-card { animation-delay: 0.4s; }
+.js .hero-main > :nth-child(6) { animation-delay: 0.38s; }
+.js .hero-art { animation-delay: 0.2s; }
 
 @keyframes hero-in {
   to {
@@ -358,24 +395,26 @@ h3.subtitle {
 
 /* Two light pills that differ only in tint: white for papers,
    pale periwinkle (the challenge color) for the challenge */
+/* Call for abstracts: solid coral, the sticker palette's second accent */
 .hero-actions .button.is-papers {
-  background: #fff;
+  background: var(--coral);
   color: var(--navy);
 }
 
 .hero-actions .button.is-papers:hover {
-  background: #eef1f7;
+  background: var(--coral-hover);
   color: var(--navy);
 }
 
+/* Challenges are the core of the workshop: a solid periwinkle-blue fill, the strongest button in the hero */
 .hero-actions .button.is-challenge {
-  background: #c9d1ff;
-  color: #18245c;
+  background: var(--challenge-solid);
+  color: #fff;
 }
 
 .hero-actions .button.is-challenge:hover {
-  background: #d8deff;
-  color: #18245c;
+  background: var(--challenge-solid-hover);
+  color: #fff;
 }
 
 .hero-actions .button.is-cta:hover {
@@ -394,7 +433,11 @@ h3.subtitle {
 }
 
 .hero-actions .is-challenge .cta-dot {
-  background: #18245c;
+  background: #fff;
+}
+
+.hero-actions .is-challenge .cta-dot svg {
+  stroke: #3445d6;
 }
 
 .hero-actions .cta-dot svg {
@@ -560,23 +603,23 @@ h3.subtitle {
 }
 
 .session-label.is-keynote {
-  color: #23824f;
+  color: var(--mint-deep);
 }
 
 .session-label.is-oral {
-  color: #2a5bd7;
+  color: var(--blue-deep);
 }
 
 .session-label.is-break {
-  color: #b5651d;
+  color: var(--coral-deep);
 }
 
 .session-label.is-challenge-row {
-  color: #6a45c9;
+  color: var(--blue-deep);
 }
 
 .session-label.is-interactive {
-  color: #1f7a7a;
+  color: var(--mint-deep);
 }
 
 /* Keynote card, modeled on the DriveX 2026 schedule */
@@ -768,7 +811,7 @@ a.session-header:hover {
 }
 
 .challenge-links .button.is-primary-action:hover {
-  background: #1d349a;
+  background: var(--blue-darker);
   color: #fff;
   text-decoration: none;
 }
@@ -889,16 +932,16 @@ a.org:hover .org-name {
   z-index: 40;
   transform-origin: 0 50%;
   transform: scaleX(var(--progress, 0));
-  background: linear-gradient(90deg, #2846c8, #849cff);
+  background: var(--blue);
   pointer-events: none;
 }
 
 /* Navbar links: underline grows on hover and for the current section */
-.site-nav a.navbar-item:not(.is-challenge):not(.brand) {
+.site-nav a.navbar-item:not(.is-challenge):not(.is-papers):not(.brand) {
   position: relative;
 }
 
-.site-nav a.navbar-item:not(.is-challenge):not(.brand)::after {
+.site-nav a.navbar-item:not(.is-challenge):not(.is-papers):not(.brand)::after {
   content: "";
   position: absolute;
   left: 0.75rem;
@@ -911,8 +954,8 @@ a.org:hover .org-name {
   transition: transform 0.25s ease;
 }
 
-.site-nav a.navbar-item:not(.is-challenge):not(.brand):hover::after,
-.site-nav a.navbar-item.is-active:not(.is-challenge)::after {
+.site-nav a.navbar-item:not(.is-challenge):not(.is-papers):not(.brand):hover::after,
+.site-nav a.navbar-item.is-active:not(.is-challenge):not(.is-papers)::after {
   transform: scaleX(1);
 }
 
@@ -925,13 +968,15 @@ a.org:hover .org-name {
 /* Buttons lift slightly on hover */
 .hero-actions .button,
 .challenge-links .button,
-.site-nav a.navbar-item.is-challenge {
+.site-nav a.navbar-item.is-challenge,
+.site-nav a.navbar-item.is-papers {
   transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .hero-actions .button:hover,
 .challenge-links .button:not([disabled]):hover,
-.site-nav a.navbar-item.is-challenge:hover {
+.site-nav a.navbar-item.is-challenge:hover,
+.site-nav a.navbar-item.is-papers:hover {
   transform: translateY(-2px);
 }
 
@@ -952,7 +997,7 @@ a.org:hover .org-name {
 
 .content .topic-list li:hover {
   transform: translateY(-3px);
-  border-color: rgba(40, 70, 200, 0.35);
+  border-color: rgba(52, 69, 214, 0.35);
   box-shadow: 0 10px 24px rgba(19, 33, 60, 0.08);
 }
 
@@ -980,7 +1025,7 @@ a.org:hover .org-name {
 }
 
 .session-card:hover {
-  border-color: rgba(35, 130, 79, 0.3);
+  border-color: rgba(31, 127, 92, 0.3);
   box-shadow: 0 8px 22px rgba(19, 33, 60, 0.07);
 }
 
@@ -993,7 +1038,7 @@ a.org:hover .org-name {
 a.org:hover img,
 a.org:hover .initials {
   transform: scale(1.05);
-  box-shadow: 0 0 0 3px #fff, 0 0 0 5px rgba(40, 70, 200, 0.45);
+  box-shadow: 0 0 0 3px #fff, 0 0 0 5px rgba(52, 69, 214, 0.45);
 }
 
 /* Sections fade up as they scroll into view (only when JS runs) */
@@ -1038,7 +1083,7 @@ a.org:hover .initials {
 }
 
 .is-dark a {
-  color: #a9baff;
+  color: var(--blue-mist);
 }
 
 .is-dark .tba {
@@ -1053,8 +1098,8 @@ a.org:hover .initials {
   --ch-line: rgba(201, 214, 255, 0.14);
   --ch-panel: rgba(255, 255, 255, 0.035);
   --ch-soft: #a7b2c9;
-  --ch-accent: #9db0ff;
-  --ch-warn: #ff9a85;
+  --ch-accent: var(--blue-mist);
+  --ch-warn: var(--coral);
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -1228,14 +1273,14 @@ a.org:hover .initials {
 }
 
 .ch-pool.is-private {
-  border-color: rgba(157, 176, 255, 0.55);
+  border-color: rgba(169, 182, 255, 0.55);
   background:
-    linear-gradient(180deg, rgba(157, 176, 255, 0.12), rgba(157, 176, 255, 0.03) 60%),
+    linear-gradient(180deg, rgba(169, 182, 255, 0.12), rgba(169, 182, 255, 0.03) 60%),
     var(--ch-panel);
 }
 
 .ch-pool.is-private:hover {
-  border-color: rgba(157, 176, 255, 0.85);
+  border-color: rgba(169, 182, 255, 0.85);
 }
 
 .ch-tag {
@@ -1306,8 +1351,8 @@ a.org:hover .initials {
 }
 
 .ch-step.is-policy {
-  border-color: rgba(157, 176, 255, 0.55);
-  background: rgba(157, 176, 255, 0.1);
+  border-color: rgba(169, 182, 255, 0.55);
+  background: rgba(169, 182, 255, 0.1);
 }
 
 .ch-k {
@@ -1371,8 +1416,8 @@ a.org:hover .initials {
 }
 
 .ch-panel.is-warn {
-  border-color: rgba(255, 154, 133, 0.35);
-  background: rgba(255, 154, 133, 0.06);
+  border-color: rgba(255, 138, 122, 0.35);
+  background: rgba(255, 138, 122, 0.06);
 }
 
 .ch-panel.is-warn h4 {
@@ -1583,7 +1628,7 @@ a.org:hover .initials {
 }
 
 .ch-awards .is-repro {
-  border-color: rgba(157, 176, 255, 0.45);
+  border-color: rgba(169, 182, 255, 0.45);
 }
 
 .ch-awards .is-repro .place {
@@ -1753,7 +1798,7 @@ a.org:hover .initials {
 
 .paper-track:hover {
   transform: translateY(-3px);
-  border-color: rgba(40, 70, 200, 0.35);
+  border-color: rgba(52, 69, 214, 0.35);
   box-shadow: 0 10px 24px rgba(19, 33, 60, 0.08);
 }
 
@@ -1764,7 +1809,7 @@ a.org:hover .initials {
   padding: 0.15rem 0.6rem;
   border-radius: 999px;
   color: var(--accent);
-  background: var(--accent-soft, #e6ebfb);
+  background: var(--blue-tint);
   margin-bottom: 0.8rem;
 }
 
@@ -1831,12 +1876,16 @@ a.org:hover .initials {
   html {
     scroll-behavior: auto;
   }
-  .hero.site-hero::before,
-  .hero.site-hero::after {
+  .hero-loop .float,
+  .hero-loop .rain line,
+  .hero-loop .lamp {
     animation: none;
   }
+  .hero-loop .lamp-go {
+    opacity: 1;
+  }
   .js .hero-main > *,
-  .js .hero-card,
+  .js .hero-art,
   .js .reveal {
     opacity: 1;
     transform: none;
@@ -1859,5 +1908,64 @@ a.org:hover .initials {
 }
 
 .challenge .track-kicker {
-  color: #a9b6ff;
+  color: var(--blue-mist);
+}
+
+/* One challenge band holds both tracks and the shared rules; each part opens with a rule line */
+.ch-track {
+  margin-top: 4.5rem;
+  padding-top: 3.5rem;
+  border-top: 1px solid var(--ch-line);
+}
+
+.ch-track-title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(1.7rem, 3.4vw, 2.2rem);
+  line-height: 1.2;
+  color: #fff;
+  margin: 0 0 0.75rem;
+}
+
+.ch-track > .ch-lead {
+  max-width: 46rem;
+}
+
+/* Placeholder for details that are not out yet */
+.ch-soon {
+  margin: 1.1rem 0 0;
+  padding: 1rem 1.2rem;
+  border: 1px dashed var(--ch-line);
+  border-radius: 12px;
+  color: var(--ch-soft);
+  font-size: 0.95rem;
+}
+
+/* Track headings carry the matching hero sticker */
+.ch-track-head {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.track-sticker {
+  width: 64px;
+  height: 56px;
+  flex: none;
+  overflow: visible;
+}
+
+@media screen and (max-width: 560px) {
+  .track-sticker {
+    width: 48px;
+    height: 42px;
+  }
+}
+
+/* Holds shared SVG definitions (the sticker shadow); takes no space */
+.svg-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
