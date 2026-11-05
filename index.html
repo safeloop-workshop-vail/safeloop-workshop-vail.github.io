@@ -17,7 +17,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" />
-    <link rel="stylesheet" href="static/css/style.css?v=2026-11-05i" />
+    <link rel="stylesheet" href="static/css/style.css?v=2026-11-05o" />
     <script>document.documentElement.classList.add("js");</script>
   </head>
 
@@ -47,7 +47,9 @@
             <a class="navbar-item" href="#news">News</a>
             <a class="navbar-item" href="#program">Program</a>
             <a class="navbar-item is-papers" href="#papers">Call for Abstracts</a>
-            <a class="navbar-item is-challenge" href="#challenge">Challenges</a>
+            <a class="navbar-item is-challenge" href="#navsafe">NavSafe-∞ Challenge</a>
+            <a class="navbar-item is-challenge" href="#gs-world">GS World Challenge</a>
+            <a class="navbar-item is-rules" href="#challenge-rules">Challenge Rules</a>
             <a class="navbar-item" href="#organizers">Organizers</a>
           </div>
         </div>
@@ -66,7 +68,9 @@
               <p class="with">with the <strong>NavSafe-∞</strong> and <strong>GS World</strong> challenge tracks</p>
               <div class="hero-actions">
                 <a class="button is-cta is-papers" href="#papers"><span>Call for Abstracts</span><span class="cta-dot" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
-                <a class="button is-cta is-challenge" href="#challenge"><span>Challenge Tracks</span><span class="cta-dot" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+                <span class="hero-actions-break" aria-hidden="true"></span>
+                <a class="button is-cta is-challenge" href="#navsafe"><span>NavSafe-∞ Challenge</span><span class="cta-dot" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+                <a class="button is-cta is-challenge" href="#gs-world"><span>GS World Challenge</span><span class="cta-dot" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
               </div>
               <dl class="hero-facts">
                 <div><dt>Venue</dt><dd>Under review<span>Workshop proposal for CVPR 2027</span></dd></div>
@@ -521,9 +525,9 @@
             ranking rule, one submission process, and one timeline.
           </p>
           <div class="challenge-links">
-            <a class="button" href="#navsafe">Track 1: NavSafe-∞</a>
-            <a class="button" href="#gs-world">Track 2: GS World</a>
-            <a class="button" href="#challenge-rules">Rules for both tracks</a>
+            <a class="button" href="#navsafe">NavSafe-∞ Challenge</a>
+            <a class="button" href="#gs-world">GS World Challenge</a>
+            <a class="button" href="#challenge-rules">Challenge Rules</a>
           </div>
         </header>
 
@@ -553,7 +557,7 @@
             <div><span class="n">280</span><span class="l">public scenarios</span></div>
             <div><span class="n">28</span><span class="l">event types in 4 categories</span></div>
             <div><span class="n">56</span><span class="l">planned private scenarios, 2 per type</span></div>
-            <div><span class="n">3</span><span class="l">fixed seeds</span></div>
+            <div><span class="n">20</span><span class="l">policies in the benchmark paper</span></div>
           </div>
 
           <div class="ch-block">
@@ -654,6 +658,7 @@
           </p>
           <div class="challenge-links">
             <span class="button" disabled>Challenge page: coming soon</span>
+            <span class="button" disabled>arXiv: coming soon</span>
             <span class="button" disabled>Devkit: Feb 1, 2027</span>
           </div>
 
@@ -661,7 +666,7 @@
             <div><span class="n">1,000</span><span class="l">public scenarios</span></div>
             <div><span class="n">13</span><span class="l">task types</span></div>
             <div><span class="n">78</span><span class="l">private scenarios</span></div>
-            <div><span class="n">3</span><span class="l">fixed seeds</span></div>
+            <div><span class="n">3</span><span class="l">environmental conditions</span></div>
           </div>
 
           <div class="ch-block">
@@ -672,7 +677,7 @@
                 <span class="ch-tag">Released</span>
                 <h4>Public pool</h4>
                 <p class="ch-pool-size">1,000 scenarios</p>
-                <p>Use it for evaluation and comparison.</p>
+                <p>Use it for evaluation and comparison. Baseline adapters include policies such as AutoVLA, DrivoR, and Alpamayo.</p>
                 <p class="ch-pool-role"><span>Used for</span>Evaluation and comparison</p>
               </article>
               <article class="ch-pool is-private">
@@ -690,7 +695,7 @@
             <div class="ch-two">
               <div class="ch-panel is-warn">
                 <h4>Evaluation only</h4>
-                <p class="ch-panel-text">GS World scenarios are evaluation-only and may not be used for training.</p>
+                <p class="ch-panel-text">GS World scenarios are evaluation-only. Training on the public or private pools or on evaluation feedback is not allowed.</p>
               </div>
               <div class="ch-panel">
                 <h4>Hardware</h4>
@@ -768,7 +773,7 @@
               <div><dt>Baselines</dt><dd>Baseline adapters include a complete sample submission and a measured runtime report on the track hardware.</dd></div>
               <div><dt>Reporting</dt><dd>Results report scenario-level variation and category or condition breakdowns with the aggregate score. The three seeds measure rollout variation; they are not three independent scenario sets.</dd></div>
               <div><dt>Score visibility</dt><dd>Private pools never leave organizer servers. Private-pool scores stay hidden until the deadline.</dd></div>
-              <div><dt>Submit</dt><dd>Code, weights, and an environment file (e.g., Conda or pip), together with a 2–4 page <a href="#papers">extended abstract</a> through OpenReview by the abstract deadline.</dd></div>
+              <div><dt>Submit</dt><dd>Code, weights, an environment file (e.g., Conda or pip), and training-data declarations, together with a 2–4 page <a href="#papers">extended abstract</a> through OpenReview by the abstract deadline.</dd></div>
               <div><dt>Verification</dt><dd>Top entries must pass an independent rerun before awards.</dd></div>
               <div><dt>Eligibility</dt><dd>Organizer entries are shown for reference only.</dd></div>
               <div><dt>Data licenses</dt><dd>Releases respect source-data and asset licenses. For scenes that cannot be redistributed, the devkit provides acquisition instructions and local processing scripts, or keeps those scenes on the evaluation server. Access to source data does not imply permission to redistribute edited renderings.</dd></div>
